@@ -1,0 +1,3 @@
+Run_Group,Query_ID,DataID,WasHit
+1,q1_1,knb.1.1,T
+1,q2_1,knb.2.1,F
