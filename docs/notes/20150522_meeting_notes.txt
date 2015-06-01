@@ -1,0 +1,66 @@
+  # R Client example code
+---------------------
+  queryParamList <- list(q="abstract:'aboveground+net+primary+productivity'", rows="5", fq="(abstract:chlorophyll AND dateUploaded:[2000-01-01T00:00:00Z TO NOW])", fl="title,id,abstract,size,dateUploaded", wt="xml")
+  result <- query(cn, queryParamList, as="list")
+  result[[1]]$id
+  
+# Phase 1: Generate results
+
+Corpus
+------
+Corpus,identifier
+C,knb.1.1
+C,knb,2.1
+
+Queries
+-------
+Query_ID,Query_Fragment,Fields
+q1_1,"aboveground net primary productivity",attribute
+q1_2,"aboveground net primary productivity",annotationField
+q1_3,"aboveground net primary productivity",text
+q2_1,"heterotrophic soil respiration"
+q2_2,"soil respiration"
+
+Results
+-------
+Corpus,Query_ID,DataID,WasHit
+C,q1_1,knb.1.1,T
+C,q1_2,knb.1.1,F
+C,q1_3,knb.1.1,F
+
+Groundtruth table
+-----------------
+DataID,Identifier,ShouldBeHit
+C,knb.1.1
+C,knb,2.1
+
+
+# Phase 2: generate precision/recall stats
+- Merge groundtruth with results to calculate p/r
+
+# Some example queries
+
+has measurement of "aboveground net primary productivity"
+has measurement of "aboveground net primary productivity > 5 g/m^2"
+
+q1_1,"aboveground net primary productivity"
+q2_1,"heterotrophic" AND "soil respiration"
+q2_2,"soil respiration"
+*q3_1,"mass carbon" IN "soil microb*"
+*q4_1,"carbon dioxide" AND "phytoplankton"
+*q5_1,"concentration" AND "bicarbonate" AND "carbonate" AND "carbon dioxide"
+*q6_1,"carbon dioxide" AND "soil" AND "release"
+q7_1,"carbon dioxide" AND "grassland" AND "uptake"
+q8_1,"methane AND release" AND "soil"
+q9_1,"net primary productivity" AND "macroalgae"
+q10_1,"carbon dioxide" AND "ocean absor*"
+
+Target 3 types of queries for each example query:
+   1) Best SOLR nat lang fields query from UI fields available
+        - ONEMercury
+        - MetacatUI (search.test.dataone.org)
+   2) Best SOLR nat lang fields query using any fields
+         (attributeName|attributeLabel|attributeDescription = soil* AND attributeUnits = *gram AND abstract|title|methods = hetertroph*)
+   3) Best semantic fields query
+   
+  
