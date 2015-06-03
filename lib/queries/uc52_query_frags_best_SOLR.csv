@@ -1,2 +1,2 @@
-q4_1,attributeName|attributeLabel|attributeDescription = *production|productivity AND attributeUnits = milligramPerMeterCubedPerDay AND abstract|title = phytoplankton AND abstract|methods = carbon14
-q5_1,attributeName|attributeLabel|attributeDescription = *carbonate|C02|carbon dioxide AND attributeUnits = micromolePerKilogram AND abstract|title = ocean AND abstract|methods = co2calc|durafet
+q4_1,attribute:"*production" or attribute:"productivity" AND attributeUnits = milligramPerMeterCubedPerDay AND abstract|title = phytoplankton AND abstract|methods = carbon14
+q5_1,attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide" AND attributeUnits = micromolePerKilogram AND abstract|title = ocean AND abstract|methods = co2calc|durafet
