@@ -1,3 +1,4 @@
-q4_1,attribute:"*production" or attribute:"productivity" AND units:milligramPerMeterCubedPerDay AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14 OR methods:carbon14)
+q4_1,(attribute:"*production" or attribute:"productivity" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14 OR methods:carbon14)
 q4_2,attribute:"*production" OR attribute:"productivity" AND (abstract:phytoplankton OR title:phytoplankton)
 q5_1,attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide" AND units:micromolePerKilogram AND (abstract:ocean OR title:ocean) AND (abstract:co2calc OR methods:co2calc)
+ 
