@@ -7,81 +7,61 @@
 #    i.e the query fragments start on Row 2 and Column 2.  
 
 library(dataone)
-cn <- CNode("SANDBOX2")
 
-#The following lines read in the query fragments.
-#queryFragment <- read.table("test.txt", header = T, sep = "\t")
-#queryFragment <- read.csv("test.csv", header = T, sep = ",")
+#Initial conditions that might be automated 
+# 1) Setting the testing environment
+cn <- CNode("SANDBOX2")
+# 2) Selecting the number of results we would like to return from SOLR
+rowsOfResult <- "5"
+# 3) Defining the entried for "Run_Group" 
+runGroup <- "1"
+
 
 queryFragment <- read.csv("uc52_query_frags_best_SOLR.csv", header = T, sep = ",", stringsAsFactors = F)
 #queryFragment <- read.csv("uc52_query_frags_best_SOLR_2.csv", header = T, sep = ",", stringsAsFactors = F)
-#queryFragment <- read.csv("uc52_query_frags_20150508.csv", header = T, sep = ",")
 
+#Finding the number of query Fragments there are from the read csv file
 rowNumber <- nrow(queryFragment)
-#The next 2 lines are for debugging purpose:
-#print("This is the number of rows:")
-#print(rowNumber)
-
 colNumber <- ncol(queryFragment)
-#The next 2 lines are for debugging purpose:
-#print("This is the number of columns:")
-#print(colNumber)
 
-#The next 2 lines are for debugging purpose:
-#print(queryFragment[1, colNumber])
-#print(queryFragment[2, colNumber])
+#Initialize an output data frame
+rowsOfResultNum <- as.numeric(rowsOfResult) * rowNumber
+df <- data.frame(Run_Group = character(rowsOfResultNum), QueryID = character(rowsOfResultNum), DataID=character(rowsOfResultNum), WasHit=character(rowsOfResultNum), stringsAsFactors = FALSE)
+
+rowCounter <- 0
 
 for (n in 1:rowNumber)
-#The next line is for debugging purpose:
-#for (n in 1:1)
 {
   queryString <- queryFragment[n, colNumber]
-  #queryString <- paste("text:", queryFragment[n, colNumber])
-  #queryString <- queryFragment[3, colNumber]
   print("This is the queryString")
   print(queryString)
   
-  #queryParamList <- list(q=queryString, rows="2", fq="abstract:chlorophyll", fl="id,title,author")
-  queryParamList <- list(q=queryString, rows="2", fl="id,title,author")
-  #print(queryParamList)
+  queryParamList <- list(q=queryString, rows=rowsOfResult, fl="id,title,author")
   result <- query(cn, queryParamList, as="data.frame", parse=FALSE)
   
   print(result)
   #str(result)
+  
+  if(class(result)=="NULL"){
+    for(i in 1:as.numeric(rowsOfResult)){
+      df$Run_Group[rowCounter + i] <- runGroup
+      df$QueryID[rowCounter + i] <- queryString
+      df$DataID[rowCounter + i] <- "NULL"
+      df$WasHit[rowCounter + i] <- "NULL"
+      
+    }
+    rowCounter <- rowCounter + as.numeric(rowsOfResult)
+  }else{  
+    for(i in 1:as.numeric(rowsOfResult)){
+      df$Run_Group[rowCounter + i] <- runGroup
+      df$QueryID[rowCounter + i] <- queryString
+      df$DataID[rowCounter + i] <- result$id[i]
+      df$WasHit[rowCounter + i] <- "T"
+    }
+    rowCounter <- rowCounter + as.numeric(rowsOfResult)
+  }
 }
 
+#print(df)
 
-######################################################
-#This is the area where I use to debug query fragments
-
-library(dataone)
-cn <- CNode("SANDBOX2")
-
-#Query 1
-#queryString <-"(attribute:\"*production\" OR attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14 OR methods:carbon14)"
-queryString <-"(attribute:\"*production\" OR attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)"
-queryParamList <- list(q=queryString, rows="2", fl="id,title,author")
-result <- query(cn, queryParamList, as="data.frame", parse=FALSE)
-print(result)
-
-#Query 2
-queryString <- "attribute:\"*production\" OR attribute:\"productivity\" AND (abstract:phytoplankton OR title:phytoplankton)"
-queryParamList <- list(q=queryString, rows="2", fl="id,title,author")
-result <- query(cn, queryParamList, as="data.frame", parse=FALSE)
-print(result)
-
-#Query 3
-#queryString <- "attribute:\"*carbonate\" OR attribute:\"CO2\" OR attribute:\"carbon dioxide\" AND units:micromolePerKilogram AND (abstract:ocean OR title:ocean) AND (abstract:co2calc OR methods:co2calc)"
-queryString <- "attribute:\"*carbonate\" OR attribute:\"CO2\" OR attribute:\"carbon dioxide\" AND units:micromolePerKilogram AND (abstract:ocean OR title:ocean) AND (abstract:co2calc)"
-queryParamList <- list(q=queryString, rows="2", fl="id,title,author")
-result <- query(cn, queryParamList, as="data.frame", parse=FALSE)
-print(result)
-
-
-
-
-
-
-
-
-
+write.csv(df, "TestOutput.csv")
