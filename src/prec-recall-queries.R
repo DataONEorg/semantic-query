@@ -45,4 +45,4 @@ for (n in 1:nrow(queryFragment)) {
 #print(df)
 
 # Write out the results as a CSV file using a filename linked to the runGroup
-write.csv(df, paste("query-results-run", runGroup, "out.csv", sep = '-'), row.names=F)
+write.csv(df, paste("./results/query-results-run", runGroup, "out.csv", sep = '-'), row.names=F)
