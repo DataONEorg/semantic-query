@@ -1,6 +1,6 @@
 QueryId,QueryString
 q4_1,(attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)
-q4_2,attribute:\"*production\" OR attribute:\"productivity\" AND (abstract:phytoplankton OR title:phytoplankton)
+q4_2,attribute:\"productivity\" AND (abstract:phytoplankton OR title:phytoplankton)
 q5_1,(attribute:\"*carbonate\" or attribute:\"C02\" or attribute:\"carbon dioxide\") AND (abstract:ocean OR title:ocean) AND co2calc 
 q9_1,attribute:\"net primary production\" AND (abstract:coastal macroalgae OR title:coastal macroalgae)
 q10_1,(attribute:\"C02 flux\" or attribute:\"carbon dioxide flux\") AND (abstract:ocean OR title:ocean) AND co2calc
