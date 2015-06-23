@@ -28,15 +28,17 @@
 # --> Ex: '~/dataone/gitcheckout/semantic-query/lib/ground_truth/'
 # 8) gtFileName = the file name that contains the ground truth of interest.
 # --> Ex: 'test_corpus_c_groundtruth_carbon_flux_queries.csv'
+# 9) queryName = the query question we are investigating
+# --> Ex: 'Q4'
 
-prec_recall_wrapper <- function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath, gtFilePath, gtFileName){
+prec_recall_wrapper <- function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath, gtFilePath, gtFileName, queryName){
   
   #print(testEnv)
   #prec_recall_function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath)
   outputFileLocation <- prec_recall_function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath)
   #print(outputFileLocation)
   
-  CompareCSV_function(gtFilePath, gtFileName, outputFileLocation)
+  CompareCSV_function(gtFilePath, gtFileName, outputFileLocation, queryName)
   
   return()
   
