@@ -33,7 +33,7 @@ prec_recall_function <- function(numOfRows, queryFragFilePath, queryFragFileName
   #queryFragmentFilePath <- paste0("./lib/queries/", queryFragmentFileName)
   queryFragmentFilePath <- paste0(queryFragmentFileDirectory, queryFragmentFileName)
   print(queryFragmentFilePath)
-  queryFragment <- read.csv(queryFragmentFilePath, header = T, sep = ",", stringsAsFactors = F)
+  queryFragment <- read.csv(queryFragmentFilePath, header = T, sep = ",", quote="", stringsAsFactors = F)
   
   # Initialize an output data frame with the proper columns
   df <- data.frame(id = character(0), Run_Group = character(0), QueryID = character(0),
