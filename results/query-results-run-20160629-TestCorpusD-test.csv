@@ -1,3 +1,3 @@
-query_type,query,#_relevant,#_retrieved,precision,recall
-attribute,q1,2,0,0,0
-attribute,q4,20,18,100%,90%
+query_date,groundtruth_filename,query_type,query,#_relevantretrieved,#_totalrelevant,#_totalretrieved,recall,precision
+20150629,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q1,0,9,2,0,0
+20150629,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q4,18,20,18,90%,100%
