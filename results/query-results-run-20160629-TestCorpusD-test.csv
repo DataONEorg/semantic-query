@@ -1,3 +1,5 @@
 query_date,groundtruth_filename,query_type,query,#_relevantretrieved,#_totalrelevant,#_totalretrieved,recall,precision
 20150629,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q1,0,9,2,0,0
 20150629,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q4,18,20,18,90%,100%
+20150707,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q5,0,1,0,0,N/A
+20150707,test_corpus_d_groundtruth_carbon_flux_queries.csv,attribute,q9,0,5,1,0,0
