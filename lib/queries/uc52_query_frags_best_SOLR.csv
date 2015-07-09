@@ -7,6 +7,7 @@ q10_1,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:oc
 q1_1,attribute:"net primary production" AND (abstract:"above ground" OR title:"above ground")
 q2_1,attribute:"soil respiration" AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:ecosystem OR title:ecosystem)
 q3_1,(attribute:carbon AND attribute:*gram*) AND (abstract:microb* OR title:microb*) AND (abstract:soil OR title: soil)
+q3_2,(attribute:carbon AND attribute:*gram*) AND (abstract:soil OR title: soil)
 q6_1,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:soil OR title:soil)
 q7_1,(attribute:"C02 uptake" or attribute:"carbon dioxide uptake") AND "enrichment experiment" AND (abstract:grassland OR title:grassland)
 q8_1,(attribute:methane AND (attribute:*per*metersquare* OR attribute:persquare*meter) ) AND (abstract:soil OR title:soil)
