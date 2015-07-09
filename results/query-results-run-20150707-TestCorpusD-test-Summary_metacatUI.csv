@@ -1,0 +1,5 @@
+query_date,groundtruth_filename,query_type,query,#_relevantretrieved,#_totalrelevant,#_totalretrieved,recall,precision
+20150708,test_corpus_d_groundtruth_carbon_flux_queries.csv,metacatUI,q1,0,9,0,0,N/A
+20150708,test_corpus_d_groundtruth_carbon_flux_queries.csv,metacatUI,q4,1,20,1,5%,100%
+20150708,test_corpus_d_groundtruth_carbon_flux_queries.csv,metacatUI,q5,0,1,1,0,0
+20150708,test_corpus_d_groundtruth_carbon_flux_queries.csv,metacatUI,q9,2,5,2,40%,100%
