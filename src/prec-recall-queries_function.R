@@ -32,7 +32,7 @@ prec_recall_function <- function(numOfRows, queryFragFilePath, queryFragFileName
   #      "./lib/queries/uc52_query_frags_best_SOLR.csv", header = T, sep = ",", stringsAsFactors = F)
   #queryFragmentFilePath <- paste0("./lib/queries/", queryFragmentFileName)
   queryFragmentFilePath <- paste0(queryFragmentFileDirectory, queryFragmentFileName)
-  print(queryFragmentFilePath)
+  #print(queryFragmentFilePath)
   queryFragment <- read.csv(queryFragmentFilePath, header = T, sep = ",", quote="", stringsAsFactors = F)
   
   # Initialize an output data frame with the proper columns
@@ -41,7 +41,7 @@ prec_recall_function <- function(numOfRows, queryFragFilePath, queryFragFileName
   for (n in 1:nrow(queryFragment)) {
       queryid <- queryFragment[n,1]
       queryString <- queryFragment[n, 2]
-      print(paste0("Running query (", queryid, "): ", queryString))
+      #print(paste0("Running query (", queryid, "): ", queryString))
       queryParamList <-
           list(q = queryString, rows = rowsOfResult, fl = "id")
     
