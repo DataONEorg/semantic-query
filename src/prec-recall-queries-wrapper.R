@@ -30,15 +30,16 @@
 # --> Ex: 'test_corpus_c_groundtruth_carbon_flux_queries.csv'
 # 9) queryName = the query question we are investigating
 # --> Ex: 'Q4'
+#10) queryFragName = the query fragement that we are calculating the recall and precision for
 
-prec_recall_wrapper <- function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath, gtFilePath, gtFileName, queryName){
+prec_recall_wrapper <- function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath, gtFilePath, gtFileName, queryName, queryFragName){
   
   #print(testEnv)
   #prec_recall_function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath)
   outputFileLocation <- prec_recall_function(numOfRows, queryFragFilePath, queryFragFileName, runGroupNumber, outputFilePath)
   #print(outputFileLocation)
   
-  CompareCSV_function(gtFilePath, gtFileName, outputFileLocation, queryName)
+  CompareCSV_function(gtFilePath, gtFileName, outputFileLocation, queryName, queryFragName)
   
   return()
   
