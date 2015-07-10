@@ -6,7 +6,7 @@
 # 1) Definition of Recall: A/(A+B), where A = # of relevant retrieved and B = # of relevant records NOT retrieved
 # 2) Definition of Precision: A/(A+C), where A = # of relevant retrieved and C = # of irrelevant records retrieved
 
-CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, queryName){
+CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, queryName, queryFragName){
   
   groundTruthFilePath <- paste0(gtFilePath, gtFileName)
   #print(groundTruthFilePath)
@@ -16,8 +16,8 @@ CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, quer
   #print(totalRelevantRecords)
   
   queryOfInterest <- which( colnames(groundTruthDF) == queryName )
-  #print("This is the query name")
-  #print(queryName)
+  print("This is the query name")
+  print(queryName)
   #print(queryOfInterest)
   counter <- table(groundTruthDF[queryOfInterest])
   totalRelevantRecords <- counter[names(counter)==1]
@@ -30,13 +30,32 @@ CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, quer
   queryResultDF <- read.csv(outputFileLocation, header = T, sep = ",", stringsAsFactors = F)
   #totalQueryResult <- nrow(queryResultDF)
   #print(totalQueryResult)
-
-  result <- merge(groundTruthDF, queryResultDF, by='id')
-  #print(result)
   
+  result <- merge(groundTruthDF, queryResultDF, by='id')
+  #print("This is the number of rows in result")
+  #print(result)
+  #print(nrow(result))
+  #print(class(result))
+  
+  #Block of code that calculates the total number retrieved based on the query fragment selected
+  numberRetrieved <- which( colnames(result) == 'QueryID')
+  #print("This is the value for variable numberRetrieved")
+  #print(numberRetrieved)
+  counter2 <- table(result[numberRetrieved])
+  #print("This is the value for variable counter2")
+  #print(counter2)
+  totalRecordsRetrieved <- counter2[names(counter2)== queryFragName]
+  print("This is the total records retrieved for this fragment")
+  print(totalRecordsRetrieved)
+  
+  if(length(totalRecordsRetrieved) == 0)
+  {
+    print("The query fragment did not yield any results.")
+  }
+  else{
   dataOfInterest <- which( colnames(result) == queryName )
   counter_2 <- table(result[dataOfInterest])
-  
+
   A_relevantRetrieved <- counter_2[names(counter_2)==1]
   print("This is the value of A_relevantRetrieved")
   print(A_relevantRetrieved)
@@ -45,7 +64,8 @@ CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, quer
   print("This is the value of B_relevantNotRetrieved")
   print(B_releventNotRetrieved)
   
-  C_irrelevantRetrieved <- nrow(result) - A_relevantRetrieved
+  C_irrelevantRetrieved <- totalRecordsRetrieved - A_relevantRetrieved
+  #C_irrelevantRetrieved <- nrow(result) - A_relevantRetrieved
   print("This is the value of C_irrelevantRetrieved")
   print(C_irrelevantRetrieved)
   
@@ -54,13 +74,14 @@ CompareCSV_function <- function(gtFilePath, gtFileName, outputFileLocation, quer
   
   #Alternative (simpler) calculations:
   Recall <- (A_relevantRetrieved/(totalRelevantRecords))*100
-  Precision <- A_relevantRetrieved/(nrow(result))*100
+  Precision <- A_relevantRetrieved/(totalRecordsRetrieved)*100
+  #Precision <- A_relevantRetrieved/(nrow(result))*100
 
   #print(Recall)
   #print(Precision)
 
   print(paste0("Recall for this query is: ", round(Recall, digit=2), "%"))
   print(paste0("Precision for this query is: ", round(Precision, digit=2), "%"))
-  
+  }
   return()
 }
