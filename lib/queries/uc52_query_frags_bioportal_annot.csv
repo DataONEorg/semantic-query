@@ -1,4 +1,0 @@
-q4_1,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000021
-q5_1,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000325)
-q9_1,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000031
-q10_1,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000201 AND sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/ENVO_00000015
