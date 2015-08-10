@@ -19,18 +19,13 @@ q4_1,metacat_ui,phytoplankton productivity
 q4_1,full_text,(attribute:"productivity" AND (attribute:milligramPerMeterSquaredPerDay OR attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton)
 q4_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000021
 q4_1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000021
-q4_2,nat_lang,phytoplankton productivity, any dimensions or method
-q4_2,metacat_ui,phytoplankton productivity
-q4_2,full_text,attribute:"productivity" AND (abstract:phytoplankton OR title:phytoplankton)
-q4_2,bioportal_annot,-9999
-q4_2,esor_annot,-9999
-q5_1,nat_lang,concentrations of carbonate and bicarbonate ions in aquatic systems
-q5_1,metacat_ui,carbonate and bicarbonate concentration
-q5_1,full_text,(attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide") AND (abstract:ocean OR title:ocean)
-q5_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000325)
-q5_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND (sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000325)
+q5_1,nat_lang,concentrations of dissolved carbon dioxide, carbonate or bicarbonate in an aquatic system
+q5_1,metacat_ui,carbon dioxide, carbonate or bicarbonate concentration
+q5_1,full_text,attribute:concentration AND (attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide") AND (abstract:aquatic OR title:aquatic)
+q5_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND (sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 OR sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_41609 OR sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_17544) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000325)
+q5_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND (sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_16526 OR sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_41609 OR sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_17544) AND (sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000325)
 q6_1,nat_lang,ecosystem carbon flux in dimensions of (amount or mass) of (carbon dioxide or carbon) per area per time
-q6_1,metacat_ui,carbon dioxide "flux tower"
+q6_1,metacat_ui,"carbon dioxide" "flux tower"
 q6_1,full_text,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:"flux tower" OR title:"flux tower")
 q6_1,bioportal_annot,-9999
 q6_1,esor_annot,-9999
