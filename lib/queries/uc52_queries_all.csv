@@ -4,9 +4,9 @@ q1_1,metacat_ui,grassland above ground net primary production
 q1_1,full_text,attribute:"net primary production" AND (abstract:"above ground" OR title:"above ground")
 q1_1,bioportal_annot,-9999
 q1_1,esor_annot,-9999
-q2_1,nat_lang,heterotrophic soil respiration as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
+q2_1,nat_lang,heterotrophic soil respiration as carbon dioxide flux in dimensions of (amount or mass) per (area or volume) per time
 q2_1,metacat_ui,heterotrophic soil respiration
-q2_1,full_text,attribute:"soil respiration" AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:soil OR title:soil)
+q2_1,full_text,(attribute:"soil respiration" AND (attribute:"carbon dioxide" OR attribute:CO2) AND (attribute:time)) AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:soil OR title:soil)
 q2_1,bioportal_annot,-9999
 q2_1,esor_annot,-9999
 q3_1,nat_lang,soil carbon soil content in dimensions of (amount or mass) of carbon per (volume of soil or area of surface) 
@@ -16,7 +16,7 @@ q3_1,bioportal_annot,-9999
 q3_1,esor_annot,-9999
 q4_1,nat_lang,phytoplankton productivity as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
 q4_1,metacat_ui,phytoplankton productivity
-q4_1,full_text,(attribute:"productivity" AND (attribute:milligramPerMeterSquaredPerDay OR attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton)
+q4_1,full_text,attribute:"productivity" AND (attribute:milligramPerMeterSquaredPerDay OR attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton)
 q4_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000021
 q4_1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000336 AND sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000021
 q5_1,nat_lang,concentrations of dissolved carbon dioxide, carbonate or bicarbonate in an aquatic system
@@ -34,9 +34,9 @@ q7_1,metacat_ui,("C02 uptake" OR "carbon dioxide uptake") AND "enrichment experi
 q7_1,full_text,(attribute:"C02 uptake" or attribute:"carbon dioxide uptake") AND "enrichment experiment" AND (abstract:grassland OR title:grassland)
 q7_1,bioportal_annot,-9999
 q7_1,esor_annot,-9999
-q8_1,nat_lang,growth of trees in a forest in measured as changes in diameter at breast height over time
-q8_1,metacat_ui,diameter at breast height
-q8_1,full_text,(attribute:diameter AND attribute:date) AND (abstract:tree OR title:tree)
+q8_1,nat_lang,growth of trees in a forest in measured as changes in height diameter or circumference over time
+q8_1,metacat_ui,"tree growth"
+q8_1,full_text,((attribute:diameter OR attribute:height OR attribute:circumference) AND attribute:date) AND (abstract:tree OR title:tree)
 q8_1,bioportal_annot,-9999
 q8_1,esor_annot,-9999
 q9_1,nat_lang,net primary production of coastal macroalgae in dimensions of (amount or mass) of carbon per area per time
