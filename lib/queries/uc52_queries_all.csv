@@ -2,8 +2,8 @@ query_id,query_type,query_string
 q1_1,nat_lang,above ground net primary production in a grassland in dimensions of biomass of plant material (with or without) (area or time)
 q1_1,metacat_ui,grassland above ground net primary production
 q1_1,full_text,attribute:"net primary production" AND (abstract:"above ground" OR title:"above ground")
-q1_1,bioportal_annot,-9999
-q1_1,esor_annot,-9999
+q1_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000301 AND sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_27594
+q1_1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000301 AND sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_27594
 q2_1,nat_lang,heterotrophic soil respiration as carbon dioxide flux in dimensions of (amount or mass) per (area or volume) per time
 q2_1,metacat_ui,heterotrophic soil respiration
 q2_1,full_text,(attribute:"soil respiration" AND (attribute:"carbon dioxide" OR attribute:CO2) AND (attribute:time)) AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:soil OR title:soil)
@@ -13,7 +13,7 @@ q3_1,nat_lang,soil carbon soil content in dimensions of (amount or mass) of carb
 q3_1,metacat_ui,*gram* carbon soil
 q3_1,full_text,(attribute:carbon AND attribute:*gram*) AND (abstract:soil OR title: soil)
 q3_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_27594 AND sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/ENVO_00001998
-q3_1,esor_annot,-9999
+q3_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_27594 AND sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0000033 AND sem_annotation_esor_sm:http://purl.obolibrary.org/obo/ENVO_00001998
 q4_1,nat_lang,phytoplankton productivity as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
 q4_1,metacat_ui,phytoplankton productivity
 q4_1,full_text,attribute:"productivity" AND (attribute:milligramPerMeterSquaredPerDay OR attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton)
@@ -27,8 +27,8 @@ q5_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_00000
 q6_1,nat_lang,ecosystem carbon flux in dimensions of (amount or mass) of (carbon dioxide or carbon) per area per time
 q6_1,metacat_ui,"carbon dioxide" "flux tower"
 q6_1,full_text,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:"flux tower" OR title:"flux tower")
-q6_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000200  AND em_annotation_bioportal_sm:sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000309
-q6_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_16526 AND em_annotation_esor_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000200  AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000309
+q6_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000104  AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000309
+q6_1,esor_annot,sem_annotation_esor_sm:http://purl.obolibrary.org/obo/CHEBI_16526 AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000014  AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000309
 q7_1,nat_lang,carbon dioxide uptake in an enrichment experiment in dimensions of (amount or mass) of carbon per (area or volume) per time
 q7_1,metacat_ui,("C02 uptake" OR "carbon dioxide uptake") AND "enrichment experiment" 
 q7_1,full_text,(attribute:"C02 uptake" or attribute:"carbon dioxide uptake") AND "enrichment experiment"
@@ -38,7 +38,7 @@ q8_1,nat_lang,growth of trees measured as changes in (diameter, height or curcum
 q8_1,metacat_ui,tree growth
 q8_1,full_text,((attribute:diameter OR attribute:height OR attribute:circumference) AND attribute:date) AND (abstract:tree OR title:tree)
 q8_1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000501 AND (sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001334  OR sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000119  OR sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001648  )
-q8_1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000501 AND (sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0001334  OR sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0000119  OR sem_esor_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001648  )
+q8_1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000501 AND (sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0001334  OR sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0000119  OR sem_annotation_esor_sm:http://purl.obolibrary.org/obo/PATO_0001648  )
 q9_1,nat_lang,net primary production of coastal macroalgae in dimensions of (amount or mass) of carbon per area per time
 q9_1,metacat_ui,net primary production coastal macroalgae 
 q9_1,full_text,attribute:"net primary production" AND (abstract:coastal macroalgae OR title:coastal macroalgae)
