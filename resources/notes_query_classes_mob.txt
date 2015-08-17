@@ -1,0 +1,47 @@
+Query 1: grassland ANPP
+Above ground NPP: http://purl.dataone.org/obo/ECSO_00000301
+
+carbon: http://purl.obolibrary.org/obo/CHEBI_27594
+anpp: http://purl.dataone.org/obo/ECSO_00000301
+
+
+Query 2: soil respiration
+
+## soil: ENVO:00001998  http://purl.obolibrary.org/obo/ENVO_00001998
+## CO2:  sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 
+
+Query 3: soil carbon content
+## carbon atom:http://purl.obolibrary.org/obo/CHEBI_27594
+## concentration (of): http://purl.obolibrary.org/obo/PATO_0000033
+## soil:http://purl.obolibrary.org/obo/ENVO_00001998
+
+
+Query 6: NEE
+
+## CO2:  sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 
+## flux: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001030
+## ecosystem functional level: sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000309
+
+## also have this one for flux. the ecso class is specific to carbon, but this one has dimensions.
+## flux: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001030
+
+this is areal carbon flux, from ecso
+http://purl.dataone.org/obo/ECSO_00000200
+
+used the ecso NEE class, not the pato class or the ecso carbon flux class..
+
+## CO2:  sem_annotation_bioportal_sm:http://purl.obolibrary.org/obo/CHEBI_16526 
+## flux: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001030
+## areal carbon flux: sem_annotation_bioportal_sm:http://purl.dataone.org/obo/ECSO_00000200
+## ecosystem functional level: sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000309
+
+NEE:
+http://purl.dataone.org/obo/ECSO_00000104
+
+
+
+query 8: tree growth
+## diameter: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001334
+## height: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0000119
+## circumference: em_annotation_bioportal_sm:http://purl.obolibrary.org/obo/PATO_0001648
+## tree: sem_annotation_esor_sm:http://purl.dataone.org/obo/ECSO_00000501
