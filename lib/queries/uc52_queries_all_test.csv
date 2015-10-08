@@ -1,2 +1,2 @@
 Query_ID,SOLR_Index_Type,Query_Frag
-q1_1,full_text,attribute:"net primary production
+q1_1,full_text,attribute:NPP
