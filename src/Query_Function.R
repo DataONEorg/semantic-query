@@ -87,10 +87,13 @@ query_function <- function(queryFragFullFilePath, outputFilePath){
   
   # Example: 
   ## This ecample needs to be commented out during the full automatic test ##
+  outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
   
   # Write out the results as a CSV file using a filename linked to the runGroup
-  write.csv(df, paste(outputFilePath, runGroup, "Resultset_Summary.csv", sep = '_'), row.names=F)
+  write.csv(df, paste(outputFilePath, runGroup, ".csv", sep = '_'), row.names=F)
   
-  outputFileLocation = paste(outputFilePath, runGroup, "Resultset_Summary.csv", sep = '_')
+  outputFileLocation = paste(outputFilePath, runGroup, ".csv", sep = '_')
+  print(outputFileLocation)
+  
   return(outputFileLocation)
 }
