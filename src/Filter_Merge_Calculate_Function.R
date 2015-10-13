@@ -21,13 +21,18 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
 
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-12 15:31:55_.csv'
+  outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-12 17:09:06_.csv'
   
   queryResultDF <- read.csv(outputFileLocation, header = T, sep = ",", stringsAsFactors = F)
   
-  filtered_result <- merge(groundTruthDF, queryResultDF, by='Dataset_ID')
+  #filtered_result <- merge(groundTruthDF, queryResultDF, by='Dataset_ID')
   
+  queryResultDF$Check <- "query"
+  groundTruthDF$Check <- "ground_truth"
   
+  df <- merge(queryResultDF,groundTruthDF,by="Dataset_ID",all=TRUE)
+  filtered_merged_result <-  df[complete.cases(df[,c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")]),]
+
 
 ##########################################################################################################################################################
 ## Everything below this line needs to be updated##  
