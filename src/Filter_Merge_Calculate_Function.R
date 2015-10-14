@@ -32,20 +32,24 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   
   df <- merge(queryResultDF,groundTruthDF,by="Dataset_ID",all=TRUE)
   filtered_merged_result <-  df[complete.cases(df[,c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")]),]
-
-
-##########################################################################################################################################################
-## Everything below this line needs to be updated##  
   
-  queryOfInterest <- which( colnames(groundTruthDF) == queryName )
-  print("This is the query name")
-  print(queryName)
-  #print(queryOfInterest)
-  counter <- table(groundTruthDF[queryOfInterest])
-  totalRelevantRecords <- counter[names(counter)==1]
-  print("This is the total relevant records")
-  print(totalRelevantRecords)
+  querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
+  for (n in querycolumns) {
+    print("The query is:")
+    print(n)
+    
+    queryOfInterest <- which( colnames(filtered_merged_result) == n )
+    counter <- table(filtered_merged_result[queryOfInterest])
+    totalRelevantRecords <- counter[names(counter)==1]
+    print("This is the total relevant records")
+    print(totalRelevantRecords)
+
+    
+  }
+
+  ##########################################################################################################################################################
+  ## Everything below this line needs to be updated##  
 
   #Block of code that calculates the total number retrieved based on the query fragment selected
   numberRetrieved <- which( colnames(result) == 'QueryID')
