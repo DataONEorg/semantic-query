@@ -33,69 +33,72 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   df <- merge(queryResultDF,groundTruthDF,by="Dataset_ID",all=TRUE)
   filtered_merged_result <-  df[complete.cases(df[,c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")]),]
   
+  filtered_merged_result[is.na(filtered_merged_result)] <- 0
+  
+  
   querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
   for (n in querycolumns) {
-    print("The query is:")
-    print(n)
     
+    n <- "q2"
+
+    #Count the total number of Relevant dataset for a specific query from the ground truth
     queryOfInterest <- which( colnames(filtered_merged_result) == n )
     counter <- table(filtered_merged_result[queryOfInterest])
     totalRelevantRecords <- counter[names(counter)==1]
+
+    Relevant_Retrieved_Counter <- 0
+    IRRelevant_Retrieved_Counter <- 0
+    Relevant_NotRetrieved_Counter <- 0
+    
+    for (i in 1:nrow(filtered_merged_result)) {
+      
+      #Count the number of Relevant and Retrieved dataset for a specific query (e.g. q1)
+      if((filtered_merged_result[i,"Query_ID"]) == n && (filtered_merged_result[i,n]) == 1)
+      { 
+        #print(filtered_merged_result[i,"Dataset_ID"])
+        Relevant_Retrieved_Counter <- Relevant_Retrieved_Counter + 1
+      }
+      
+      #Count the number of IRRelevant and Retrieved dataset for a specific query (e.g. q1)
+      if((filtered_merged_result[i,"Query_ID"]) == n && (filtered_merged_result[i,n]) == 0)
+      {  
+        #print(filtered_merged_result[i,"Dataset_ID"])
+        IRRelevant_Retrieved_Counter <- IRRelevant_Retrieved_Counter + 1
+      }
+      
+      #Count the number of Relevant and NOT Retrieved dataset for a specific query (e.g. q1)
+      if((filtered_merged_result[i,"Query_ID"]) == 0 && (filtered_merged_result[i,n]) == 1)
+      {  
+        #print(filtered_merged_result[i,"Dataset_ID"])
+        Relevant_NotRetrieved_Counter <- Relevant_NotRetrieved_Counter + 1
+      }
+    }
+    
+    print("The query is:")
+    print(n)
     print("This is the total relevant records")
     print(totalRelevantRecords)
-
+    print("The total number of relevant and retrieved datasets is:")
+    print(Relevant_Retrieved_Counter)
+    print("The total number of irrelevant and retrieved dataset is:")
+    print(IRRelevant_Retrieved_Counter)
+    print("The total number of relevant and NOT retrieved dataset is:")
+    print(Relevant_NotRetrieved_Counter)
     
+    if(totalRelevantRecords == 0) {
+      print("There are no relevant dataset for this query from the ground truth")
+    } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
+      Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
+      Precision <- "Not Applicable"
+    } else {
+      Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
+      Precision <- (Relevant_Retrieved_Counter / (Relevant_Retrieved_Counter + IRRelevant_Retrieved_Counter))*100
+    }
+      
+    print("Recall for this query is: ")
+    print(Recall)
+    print("Precision for this query is: ")
+    print(Precision)
   }
-
-  ##########################################################################################################################################################
-  ## Everything below this line needs to be updated##  
-
-  #Block of code that calculates the total number retrieved based on the query fragment selected
-  numberRetrieved <- which( colnames(result) == 'QueryID')
-  #print("This is the value for variable numberRetrieved")
-  #print(numberRetrieved)
-  counter2 <- table(result[numberRetrieved])
-  #print("This is the value for variable counter2")
-  #print(counter2)
-  totalRecordsRetrieved <- counter2[names(counter2)== queryFragName]
-  print("This is the total records retrieved for this fragment")
-  print(totalRecordsRetrieved)
-  
-  if(length(totalRecordsRetrieved) == 0)
-  {
-    print("The query fragment did not yield any results.")
-  }
-  else{
-    dataOfInterest <- which( colnames(result) == queryName )
-    counter_2 <- table(result[dataOfInterest])
-    
-    A_relevantRetrieved <- counter_2[names(counter_2)==1]
-    print("This is the value of A_relevantRetrieved")
-    print(A_relevantRetrieved)
-    
-    B_releventNotRetrieved <- totalRelevantRecords - A_relevantRetrieved
-    print("This is the value of B_relevantNotRetrieved")
-    print(B_releventNotRetrieved)
-    
-    C_irrelevantRetrieved <- totalRecordsRetrieved - A_relevantRetrieved
-    #C_irrelevantRetrieved <- nrow(result) - A_relevantRetrieved
-    print("This is the value of C_irrelevantRetrieved")
-    print(C_irrelevantRetrieved)
-    
-    #Recall <- (A_relevantRetrieved/(A_relevantRetrieved+B_releventNotRetrieved))*100
-    #Precision <- A_relevantRetrieved/(A_relevantRetrieved+C_irrelevantRetrieved)*100
-    
-    #Alternative (simpler) calculations:
-    Recall <- (A_relevantRetrieved/(totalRelevantRecords))*100
-    Precision <- A_relevantRetrieved/(totalRecordsRetrieved)*100
-    #Precision <- A_relevantRetrieved/(nrow(result))*100
-    
-    #print(Recall)
-    #print(Precision)
-    
-    print(paste0("Recall for this query is: ", round(Recall, digit=2), "%"))
-    print(paste0("Precision for this query is: ", round(Precision, digit=2), "%"))
-  }
-  return()
 }
