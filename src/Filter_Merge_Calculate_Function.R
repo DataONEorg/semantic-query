@@ -38,10 +38,16 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   
   querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
+  # Initialize an output data frame with the proper columns
+  RP_Result <- data.frame(Test_Corpus_ID = character(0), Query_ID = character(0), SOLR_Index_Type = character(0), Run_ID = character(0), Ontology_Set_ID = character(0), Precision = character(0), Recall = character(0),
+                          stringsAsFactors = FALSE)
+  
+  line_counter <- 1
+  
   for (n in querycolumns) {
     
-    n <- "q2"
-
+    #n <- "q2"
+   
     #Count the total number of Relevant dataset for a specific query from the ground truth
     queryOfInterest <- which( colnames(filtered_merged_result) == n )
     counter <- table(filtered_merged_result[queryOfInterest])
@@ -86,8 +92,10 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     print("The total number of relevant and NOT retrieved dataset is:")
     print(Relevant_NotRetrieved_Counter)
     
-    if(totalRelevantRecords == 0) {
+    if(length(totalRelevantRecords) == 0) {
       print("There are no relevant dataset for this query from the ground truth")
+      Recall <- "Not Applicable"
+      Precision <- "Not Applicable"
     } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
       Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
       Precision <- "Not Applicable"
@@ -100,5 +108,19 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     print(Recall)
     print("Precision for this query is: ")
     print(Precision)
+    
+    if (line_counter == '1'){
+      test <- data.frame("To be added", n, "To be Added", "To be Added", "To be Added", as.character(Precision), as.character(Recall))
+      colnames(test) <- c("Test_Corpus_ID", "Query_ID", "SOLR_Index_Type", "Run_ID", "Ontology_Set_ID", "Precision", "Recall")
+      test2 <- rbind(test, RP_Result)
+    } else {
+      test <- data.frame("To be added", n, "To be Added", "To be Added", "To be Added", as.character(Precision), as.character(Recall))
+      colnames(test) <- c("Test_Corpus_ID", "Query_ID", "SOLR_Index_Type", "Run_ID", "Ontology_Set_ID", "Precision", "Recall")
+      test2 <- rbind(test, test2)
+    }
+  
+    line_counter <- line_counter + 1
+    
   }
+  
 }
