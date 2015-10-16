@@ -8,10 +8,12 @@
 # 2) Sequentially submit the query fragements as SOLR queries using the query() function.
 # 3) Accumulate the results in a data frame, and write the results to an output file.
 
-library(dataone)
+# Note:
+# 1) The output of function is set up to be written to the following directory: '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
 
-query_function <- function(queryFragFullFilePath, outputFilePath){
-
+query_function <- function(queryFragFullFilePath){
+  
+  library(dataone)
   
   #Setting the Initial Conditions:
   # The initial conditions are set using 4 different variables: cn, rowsOfResult, queryFragmentFileDirectory, runGroup
@@ -22,24 +24,24 @@ query_function <- function(queryFragFullFilePath, outputFilePath){
   
   # 2) Number of results requested from SOLR:
   rowsOfResult <- 1000
-  print(rowsOfResult)
+  #print(rowsOfResult)
   
   # 3) Directory location for the query fragment file:
   # Example: 
-  ## This ecample needs to be commented out during the full automatic test ##
-  queryFragFullFilePath <- '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv'
+  ## This example needs to be commented out during the full automatic test ##
+  #queryFragFullFilePath <- '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv'
   
   
   queryFragmentFileDirectory <- queryFragFullFilePath
-  print(queryFragmentFileDirectory)
+  #print(queryFragmentFileDirectory)
 
   # 4) Defining the entry for "Run_Group"
   runGroup <- Sys.time()
-  print(runGroup)
+  #print(runGroup)
   
   #Read in the query fragments from the input CSV file
   queryFragment <- read.csv(queryFragmentFileDirectory, header = T, sep = ",", quote="", stringsAsFactors = F)
-  print(queryFragment)
+  #print(queryFragment)
   
   # Initialize an output data frame with the proper columns
   df <- data.frame(R_Time = character(0), D1_node = character(0), Query_ID = character(0), SOLR_Index_Type = character(0), Run_ID = character(0), Ontology_Set_ID = character(0), 
@@ -55,18 +57,16 @@ query_function <- function(queryFragFullFilePath, outputFilePath){
     querytype <- queryFragment[n,2]
     queryString <- queryFragment[n, 3]
     queryOntology <- queryFragment[n, 4]
-    print(paste0("Running query (", queryid, "): ", queryString))
+    #print(paste0("Running query (", queryid, "): ", queryString))
     
     queryParamList <-
       list(q = queryString, rows = as.character(rowsOfResult), fl = "id")
     
-    str(queryParamList)
-    
-    #str(cn)
+    #str(queryParamList)
     
     # Execute the query, and add in the classification columns
     result <- query(cn, queryParamList, as = "data.frame", parse = TRUE)
-    str(result)
+    #str(result)
     
     if (!is.null(result) & length(result) > 0) {
       result$R_Time <- Sys.Date()
@@ -85,8 +85,6 @@ query_function <- function(queryFragFullFilePath, outputFilePath){
   #Change the first column header from "id" to "Dataset_ID"
   names(df)[1] <- "Dataset_ID"
   
-  # Example: 
-  ## This ecample needs to be commented out during the full automatic test ##
   outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
   
   # Write out the results as a CSV file using a filename linked to the runGroup
