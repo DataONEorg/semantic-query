@@ -11,17 +11,20 @@
 # 1) Definition of Recall: A/(A+B), where A = # of relevant retrieved and B = # of relevant records NOT retrieved
 # 2) Definition of Precision: A/(A+C), where A = # of relevant retrieved and C = # of irrelevant records retrieved
 
+# Note:
+# 1) The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'
+
 filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
+  #gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
   
   groundTruthDF <- read.csv(gtFileLocation, header = T, sep = ",", stringsAsFactors = F)
 
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-12 17:09:06_.csv'
+  #outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-12 17:09:06_.csv'
   
   queryResultDF <- read.csv(outputFileLocation, header = T, sep = ",", stringsAsFactors = F)
   
@@ -81,19 +84,19 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
       }
     }
     
-    print("The query is:")
-    print(n)
-    print("This is the total relevant records")
-    print(totalRelevantRecords)
-    print("The total number of relevant and retrieved datasets is:")
-    print(Relevant_Retrieved_Counter)
-    print("The total number of irrelevant and retrieved dataset is:")
-    print(IRRelevant_Retrieved_Counter)
-    print("The total number of relevant and NOT retrieved dataset is:")
-    print(Relevant_NotRetrieved_Counter)
+    #print("The query is:")
+    #print(n)
+    #print("This is the total relevant records")
+    #print(totalRelevantRecords)
+    #print("The total number of relevant and retrieved datasets is:")
+    #print(Relevant_Retrieved_Counter)
+    #print("The total number of irrelevant and retrieved dataset is:")
+    #print(IRRelevant_Retrieved_Counter)
+    #print("The total number of relevant and NOT retrieved dataset is:")
+    #print(Relevant_NotRetrieved_Counter)
     
     if(length(totalRelevantRecords) == 0) {
-      print("There are no relevant dataset for this query from the ground truth")
+      #print("There are no relevant dataset for this query from the ground truth")
       Recall <- "Not Applicable"
       Precision <- "Not Applicable"
     } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
@@ -104,10 +107,10 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
       Precision <- (Relevant_Retrieved_Counter / (Relevant_Retrieved_Counter + IRRelevant_Retrieved_Counter))*100
     }
       
-    print("Recall for this query is: ")
-    print(Recall)
-    print("Precision for this query is: ")
-    print(Precision)
+    #print("Recall for this query is: ")
+    #print(Recall)
+    #print("Precision for this query is: ")
+    #print(Precision)
     
     if (line_counter == '1'){
       test <- data.frame("To be added", n, "To be Added", "To be Added", "To be Added", as.character(Precision), as.character(Recall))
@@ -122,5 +125,12 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     line_counter <- line_counter + 1
     
   }
+
+  # Write out the results as a Tab Delimited Text File file, so append could be used
+  write.table(test2, "~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt", append = T, sep = " ", row.names=F)
+  
+  finaloutputFileLocation = "~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt"
+
+  return()
   
 }
