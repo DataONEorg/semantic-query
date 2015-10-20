@@ -1,4 +1,4 @@
 Query_ID,SOLR_Index_Type,Query_Frag,Ontology_Set_ID
 q1,full_text,attribute:NPP,None
-q1,metcat_ui,attribute:"Net Primary Production",Other
+q1,metacat_ui,attribute:"Net Primary Production",Other
 q2,full_test,title:carbon monoxide,None
