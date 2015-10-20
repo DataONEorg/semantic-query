@@ -18,13 +18,13 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
+  #gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
   
   groundTruthDF <- read.csv(gtFileLocation, header = T, sep = ",", stringsAsFactors = F)
 
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-20 16:12:16_.csv'
+  #outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-20 16:12:16_.csv'
   
   queryResultDF <- read.csv(outputFileLocation, header = T, sep = ",", stringsAsFactors = F)
   
