@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.2.2 concept-map (Tasks_for_R_Code.vue) 2015-10-06 -->
+<!-- Tufts VUE 3.2.2 concept-map (Tasks_for_R_Code.vue) 2015-10-16 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Tue Oct 06 11:09:24 PDT 2015 by Jon and Soph on platform Windows 7 6.1 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: Saved date Fri Oct 16 11:11:11 PDT 2015 by Jon and Soph on platform Windows 7 6.1 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built May 23 2013 at 2146 by tomadm on Linux 2.6.18-348.2.1.el5 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0"
     label="Tasks_for_R_Code.vue" created="1444151180555" x="0.0" y="0.0"
     width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1444154964358" size="16439"
+    <resource referenceCreated="1445019071780" size="26139"
         spec="C:\Users\Jon and Soph\Desktop\SS Doc\UIUC\UCSB\Tasks_for_R_Code.vue"
         type="1" xsi:type="URLResource">
         <title>Tasks_for_R_Code.vue</title>
@@ -20,9 +20,15 @@
     <font>SansSerif-plain-14</font>
     <URIString>http://vue.tufts.edu/rdf/resource/3e34470ec0a8010201bfefb946e153cb</URIString>
     <child ID="6" label="Query" layerID="1" created="1444151250855"
-        x="451.0" y="114.0" width="104.20001" height="43.0"
+        x="712.0" y="65.0" width="104.20001" height="44.0"
         strokeWidth="1.0" autoSized="false" xsi:type="node">
-        <notes>Task is accomplished through a R code.</notes>
+        <notes>Task is accomplished through a R code; the file name for the R Code is "Query_Function.R"%nl;%nl;The output of function is set up to be written to the following directory: '~/dataone/gitcheckout/semantic-query/results/'</notes>
+        <resource referenceCreated="0" accessAttempted="1445018436664"
+            accessSuccessful="1445018436673"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Query_Function.R"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Query_Function.R"/>
+        </resource>
         <fillColor>#F1A83E</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -31,9 +37,15 @@
         <shape arcwidth="20.0" archeight="20.0" xsi:type="roundRect"/>
     </child>
     <child ID="7" label="Filter/Merge" layerID="1"
-        created="1444151264258" x="452.5" y="251.5" width="125.70001"
+        created="1444151264258" x="718.5" y="306.5" width="125.70001"
         height="52.5" strokeWidth="1.0" autoSized="false" xsi:type="node">
-        <notes>Task is accomplished through a R code.</notes>
+        <notes>Task is accomplished through a R code; the file name for the R Code is "Filter_Merge_Calculate_Funcation.R" %nl;%nl;This same file also contains the codes for the Calculate (Precision/Recall) task.</notes>
+        <resource referenceCreated="0" accessAttempted="1445018610951"
+            accessSuccessful="1445018610960"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"/>
+        </resource>
         <fillColor>#F1A83E</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -42,9 +54,15 @@
         <shape arcwidth="20.0" archeight="20.0" xsi:type="roundRect"/>
     </child>
     <child ID="8" label="Calculate &#xa;(Precision/Recall)" layerID="1"
-        created="1444151266888" x="451.5" y="449.0" width="145.70001"
+        created="1444151266888" x="717.5" y="504.0" width="145.70001"
         height="63.5" strokeWidth="1.0" autoSized="false" xsi:type="node">
-        <notes>Task is accomplished through a R code.</notes>
+        <notes>Task is accomplished through a R code; the file name for the R Code is "Filter_Merge_Calculate_Funcation.R"%nl;%nl;This same file also contains the codes for the Filter/Merge task.%nl;%nl;The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'%nl;%nl;Note: %sp;This code needs to be updated, so that it could take multilpe SOLR_Index_Type for the same Query_ID into account. %sp;The code also needs to ensure all the "To be added" values in the Pre_Recall_Results.txt could be updated accordingly.</notes>
+        <resource referenceCreated="0" accessAttempted="1445018630967"
+            accessSuccessful="1445018630976"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"/>
+        </resource>
         <fillColor>#F1A83E</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -53,7 +71,7 @@
         <shape arcwidth="20.0" archeight="20.0" xsi:type="roundRect"/>
     </child>
     <child ID="10" label="CN-Sandbox" layerID="1"
-        created="1444151426789" x="628.0" y="-51.0" width="105.0"
+        created="1444151426789" x="889.0" y="-100.0" width="105.0"
         height="59.0" strokeWidth="1.0" autoSized="false" xsi:type="node">
         <fillColor>#83CEFF</fillColor>
         <strokeColor>#000000</strokeColor>
@@ -62,9 +80,16 @@
         <URIString>http://vue.tufts.edu/rdf/resource/3e344710c0a8010201bfefb96d2d2715</URIString>
         <shape xsi:type="ellipse"/>
     </child>
-    <child ID="11" label="uc52_queries_all.csv" layerID="1"
-        created="1444151477045" x="204.0" y="1.0" width="168.0"
-        height="58.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
+    <child ID="11" label="uc52_queries_all_test.csv" layerID="1"
+        created="1444151477045" x="504.0" y="-132.0" width="247.4"
+        height="100.4" strokeWidth="1.0" autoSized="true" xsi:type="node">
+        <notes>The following are the information included in the "uc52_queries_all_test.csv" file: %sp;%nl;%nl;Query_ID%nl;SOLR_Index_Type%nl;Query_Frag%nl;Ontology_Set_ID</notes>
+        <resource referenceCreated="0" accessAttempted="1445018445647"
+            accessSuccessful="1445018445656"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/lib/queries/uc52_queries_all_test.csv"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/lib/queries/uc52_queries_all_test.csv"/>
+        </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -72,10 +97,16 @@
         <URIString>http://vue.tufts.edu/rdf/resource/3e344711c0a8010201bfefb9aaea9e9c</URIString>
         <shape xsi:type="rhombus"/>
     </child>
-    <child ID="12" label="Resultset_Summary_RunID.csv" layerID="1"
-        created="1444151586275" x="712.0" y="76.0" width="281.2"
-        height="85.200005" strokeWidth="1.0" autoSized="true" xsi:type="node">
-        <notes>"RunID" part of the file name is customizable.%nl;%nl;The following are the information included in the "Resultset_Summary_RunID.csv" file (the information in the parenthesis is the potential source for the data; PK = Primary Key): %sp;%nl;%nl; %sp; %sp; %sp; %sp;R_Time (R)%nl; %sp; %sp; %sp; %sp;D1_node (config file)%nl;PK %sp; Query_ID (input file)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (input file)%nl;PK %sp; Dataset_ID (SOLR query results)%nl;PK %sp; Run_ID (Config file)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (Config file)%nl; %nl;Note: Run_ID = DateTime + SOLR_Index_Type</notes>
+    <child ID="12" label="Resultset_Summary_RunID_.csv" layerID="1"
+        created="1444151586275" x="973.0" y="27.0" width="298.0"
+        height="112.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
+        <notes>"RunID" part of the file name is customizable.%nl;%nl;The following are the information included in the "Resultset_Summary_RunID.csv" file (the information in the parenthesis is the potential source for the data; PK = Primary Key): %sp;%nl;%nl;PK %sp; Dataset_ID (SOLR query results)%nl; %sp; %sp; %sp; %sp;R_Time (R)%nl; %sp; %sp; %sp; %sp;D1_node (config file)%nl;PK %sp; Query_ID (input file)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (input file)%nl;PK %sp; Run_ID (Config file)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (Config file)%nl; %nl;Note: Run_ID = DateTime + SOLR_Index_Type</notes>
+        <resource referenceCreated="0" accessAttempted="1445018511720"
+            accessSuccessful="1445018511729"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-12%2017:09:06_.csv"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-12%2017:09:06_.csv"/>
+        </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -84,60 +115,67 @@
         <shape xsi:type="rhombus"/>
     </child>
     <child ID="13" label="operates on" layerID="1"
-        created="1444151720018" x="526.89355" y="2.8504028"
-        width="126.02704" height="111.6496" strokeWidth="1.0"
+        created="1444151720018" x="788.37964" y="-46.129395"
+        width="125.60736" height="111.629395" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344712c0a8010201bfefb9b27968f0</URIString>
-        <point1 x="527.3936" y="114.0"/>
-        <point2 x="652.42065" y="3.3504028"/>
+        <point1 x="788.87964" y="65.0"/>
+        <point2 x="913.487" y="-45.629395"/>
         <ID1 xsi:type="node">6</ID1>
         <ID2 xsi:type="node">10</ID2>
     </child>
     <child ID="15" label="is input for" layerID="1"
-        created="1444151832592" x="339.831" y="55.166748"
-        width="120.439514" height="59.58145" strokeWidth="1.0"
+        created="1444151832592" x="667.7644" y="-32.099976"
+        width="79.05829" height="97.599976" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344713c0a8010201bfefb94ac3d96e</URIString>
-        <point1 x="340.331" y="55.666748"/>
-        <point2 x="459.7705" y="114.2482"/>
+        <point1 x="668.26447" y="-31.599976"/>
+        <point2 x="746.32275" y="65.0"/>
         <ID1 xsi:type="node">11</ID1>
         <ID2 xsi:type="node">6</ID2>
     </child>
     <child ID="16" label="produces" layerID="1" created="1444151895616"
-        x="554.69995" y="121.59949" width="182.21136" height="14.0"
+        x="815.7" y="78.37895" width="186.88684" height="14.0"
         strokeWidth="1.0" autoSized="false" controlCount="0"
         arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344714c0a8010201bfefb96ab69d20</URIString>
-        <point1 x="555.2" y="132.98071"/>
-        <point2 x="736.4114" y="124.21828"/>
+        <point1 x="816.2" y="86.41772"/>
+        <point2 x="1002.08685" y="84.34019"/>
         <ID1 xsi:type="node">6</ID1>
         <ID2 xsi:type="node">12</ID2>
     </child>
     <child ID="17" label="is input for" layerID="1"
-        created="1444152082567" x="569.64404" y="160.70001"
-        width="193.18365" height="91.69241" strokeWidth="1.0"
+        created="1444152082567" x="816.65405" y="138.5"
+        width="229.46399" height="168.5" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344714c0a8010201bfefb98e854342</URIString>
-        <point1 x="762.32764" y="161.20001"/>
-        <point2 x="570.144" y="251.89243"/>
+        <point1 x="1045.618" y="139.0"/>
+        <point2 x="817.15405" y="306.5"/>
         <ID1 xsi:type="node">12</ID1>
         <ID2 xsi:type="node">7</ID2>
     </child>
-    <child ID="18" label="ground_truth.csv" layerID="1"
-        created="1444152135712" x="193.20001" y="214.0" width="134.6"
-        height="50.600002" strokeWidth="1.0" autoSized="true" xsi:type="node">
+    <child ID="18" label="ground_truth_test.csv" layerID="1"
+        created="1444152135712" x="412.19995" y="352.0" width="214.0"
+        height="93.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
+        <notes>The following are the information included in the "ground_truth_test.csv" file: %sp;%nl;%nl;Dataset_ID%nl;q1 (boolean)%nl;q2 (boolean)%nl;q3 (boolean)%nl;q4 (boolean)%nl;.%nl;.%nl;.%nl;q10 (boolean)%nl;1 = the dataset ID is a ground truth for the query%nl;0 = the dataset ID is NOT a ground truth for the query</notes>
+        <resource referenceCreated="0" accessAttempted="1445018563615"
+            accessSuccessful="1445018563624"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/lib/ground_truth/ground_truth_test.csv"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/lib/ground_truth/ground_truth_test.csv"/>
+        </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -146,22 +184,22 @@
         <shape xsi:type="rhombus"/>
     </child>
     <child ID="19" label="is input for" layerID="1"
-        created="1444152152623" x="309.8396" y="246.31946"
-        width="143.16043" height="22.448181" strokeWidth="1.0"
+        created="1444152152623" x="615.4697" y="348.0135"
+        width="103.53021" height="26.715607" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344716c0a8010201bfefb94830e126</URIString>
-        <point1 x="310.33957" y="246.81946"/>
-        <point2 x="452.5" y="268.26764"/>
+        <point1 x="615.9698" y="374.22906"/>
+        <point2 x="718.5" y="348.51346"/>
         <ID1 xsi:type="node">18</ID1>
         <ID2 xsi:type="node">7</ID2>
     </child>
     <child ID="20" label="filter_merge object" layerID="1"
-        created="1444152187634" x="729.60004" y="284.4" width="186.6"
+        created="1444152187634" x="995.6" y="339.4" width="186.6"
         height="64.600006" strokeWidth="1.0" autoSized="true" xsi:type="node">
-        <notes>filter_merge object might be constructed as a R data frame and might not need to be output as a csv file.%nl;%nl;The following are the information included in the "filter_merge" object (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID%nl; %sp; %sp; %sp; %sp;D1_node %nl;PK %sp; Query_ID%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type %nl;PK %sp; Dataset_ID %nl;PK %sp; Run_ID %nl; %sp; %sp; %sp; %sp;Ontology_Set_ID %nl; %sp; %sp; %sp; %sp;Was_Rel (boolean)%nl; %sp; %sp; %sp; %sp;Was_Hit (boolean)</notes>
+        <notes>filter_merge object might be constructed as a R data frame and might not need to be output as a csv file.%nl;%nl;The following are the information included in the "filter_merge" object (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID%nl; %sp; %sp; %sp; %sp;D1_node %nl;PK %sp; Query_ID%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type %nl;PK %sp; Dataset_ID %nl;PK %sp; Run_ID %nl; %sp; %sp; %sp; %sp;Ontology_Set_ID %nl;%nl;This object is currently an R data frame and is not available as an output to users.</notes>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -170,35 +208,43 @@
         <shape xsi:type="rhombus"/>
     </child>
     <child ID="21" label="produces" layerID="1" created="1444152371772"
-        x="577.7001" y="285.20972" width="176.14874" height="23.181885"
+        x="843.7" y="340.20972" width="176.14868" height="23.181885"
         strokeWidth="1.0" autoSized="false" controlCount="0"
         arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e344717c0a8010201bfefb96a3d1424</URIString>
-        <point1 x="578.2" y="285.70972"/>
-        <point2 x="753.34875" y="307.8916"/>
+        <point1 x="844.2" y="340.70972"/>
+        <point2 x="1019.3487" y="362.8916"/>
         <ID1 xsi:type="node">7</ID1>
         <ID2 xsi:type="node">20</ID2>
     </child>
     <child ID="22" label="is input for" layerID="1"
-        created="1444152416293" x="581.6309" y="348.5" width="182.9873"
-        height="101.0" strokeWidth="1.0" autoSized="false"
-        controlCount="0" arrowState="2" xsi:type="link">
+        created="1444152416293" x="847.63086" y="403.5"
+        width="182.98724" height="101.00003" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e34471bc0a8010201bfefb9976fe194</URIString>
-        <point1 x="764.1182" y="349.0"/>
-        <point2 x="582.1309" y="449.0"/>
+        <point1 x="1030.1182" y="404.0"/>
+        <point2 x="848.1309" y="504.00003"/>
         <ID1 xsi:type="node">20</ID1>
         <ID2 xsi:type="node">8</ID2>
     </child>
-    <child ID="23" label="Prec_Recall_Results.csv" layerID="1"
-        created="1444152441095" x="693.9" y="507.69995" width="233.0"
-        height="75.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
-        <notes>The following are the information included in the "Prec_Recall_Results.csv" file (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID (string)%nl;PK %sp; Query_ID (string)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (string)%nl;PK %sp; Run_ID (string)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (string)%nl; %sp; %sp; %sp; %sp;Precision (float)%nl; %sp; %sp; %sp; %sp;Recall (float)%nl;</notes>
+    <child ID="23" label="Prec_Recall_Results.txt" layerID="1"
+        created="1444152441095" x="269.89996" y="602.69995"
+        width="231.20001" height="97.200005" strokeWidth="1.0"
+        autoSized="true" xsi:type="node">
+        <notes>The following are the information included in the "Prec_Recall_Results.csv" file (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID (string)%nl;PK %sp; Query_ID (string)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (string)%nl;PK %sp; Run_ID (string)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (string)%nl; %sp; %sp; %sp; %sp;Precision (float)%nl; %sp; %sp; %sp; %sp;Recall (float)%nl;%nl;This is the final output for the Wrapper.%nl;%nl;Note: %sp;This result needs to be updated, so that all the "To be added" values could be updated accordingly.%nl;</notes>
+        <resource referenceCreated="0" accessAttempted="1445018967675"
+            accessSuccessful="1445018967685"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/results/Prec_Recall_Results.txt"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Prec_Recall_Results.txt"/>
+            <property key="Content.type" value="text/plain"/>
+        </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -207,29 +253,126 @@
         <shape xsi:type="rhombus"/>
     </child>
     <child ID="24" label="produces" layerID="1" created="1444152513443"
-        x="596.7" y="496.66382" width="132.44507" height="30.615936"
+        x="492.0094" y="556.04236" width="225.99057" height="65.215515"
         strokeWidth="1.0" autoSized="false" controlCount="0"
         arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3e34471cc0a8010201bfefb9cfcb13f8</URIString>
-        <point1 x="597.2" y="497.16385"/>
-        <point2 x="728.6451" y="526.7798"/>
+        <point1 x="717.5" y="556.5424"/>
+        <point2 x="492.50943" y="620.75793"/>
         <ID1 xsi:type="node">8</ID1>
         <ID2 xsi:type="node">23</ID2>
+    </child>
+    <child ID="26" label="Wrapper" layerID="1" created="1445017577856"
+        x="59.438515" y="52.849976" width="212.0" height="139.0"
+        strokeWidth="1.0" autoSized="false" xsi:type="node">
+        <notes>By providing the file locations for the query fragment file and the ground truth file, the wrapper is the only functoin that the user needs to run to calculate the recall and precision values .%nl;%nl;The following are the two lines that should be entered in the R environement in order for the "Prec_Recall_Results.csv" file to be generated using the files and functions indicanted in this diagram:%nl;%nl;&gt;source('~/dataone/gitcheckout/semantic-query/src/Precision_Recall_Wrapper.R')%nl;&gt;precicison_recall_wrapper('~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv', '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv')</notes>
+        <resource referenceCreated="0" accessAttempted="1445018376616"
+            accessSuccessful="1445018376625"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Precision_Recall_Wrapper.R"
+            type="2" xsi:type="URLResource">
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Precision_Recall_Wrapper.R"/>
+        </resource>
+        <fillColor>#FEFEC9</fillColor>
+        <strokeColor>#000000</strokeColor>
+        <textColor>#000000</textColor>
+        <font>Arial-plain-12</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7803c0a8010201077f708f6bb17c</URIString>
+        <shape xsi:type="diamond"/>
+    </child>
+    <child ID="27" label="User" layerID="1" created="1445017633239"
+        x="3.5999985" y="-172.15002" width="167.0" height="100.0"
+        strokeWidth="1.0" autoSized="false" xsi:type="node">
+        <fillColor>#C1F780</fillColor>
+        <strokeColor>#000000</strokeColor>
+        <textColor>#000000</textColor>
+        <font>Arial-plain-12</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7803c0a8010201077f7018f6d457</URIString>
+        <shape xsi:type="diamond"/>
+    </child>
+    <child ID="28"
+        label="provides query fragement file and ground truth file location information to"
+        layerID="1" created="1445017656678" x="-51.711166" y="-80.69873"
+        width="351.0" height="146.11429" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+        <strokeColor>#404040</strokeColor>
+        <textColor>#404040</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7804c0a8010201077f70f09fe621</URIString>
+        <point1 x="100.54131" y="-80.19873"/>
+        <point2 x="147.03635" y="64.91556"/>
+        <ID1 xsi:type="node">27</ID1>
+        <ID2 xsi:type="node">26</ID2>
+    </child>
+    <child ID="30"
+        label="returns the file location of Resultset_Summary_RunID_.csv to"
+        layerID="1" created="1445017788565" x="246.24066" y="107.668884"
+        width="472.2998" height="58.434174" strokeWidth="1.0"
+        autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
+        <strokeColor>#404040</strokeColor>
+        <textColor>#404040</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7804c0a8010201077f7074fd9c1b</URIString>
+        <point1 x="718.04047" y="108.168884"/>
+        <point2 x="246.74066" y="138.5434"/>
+        <ID1 xsi:type="node">6</ID1>
+        <ID2 xsi:type="node">26</ID2>
+        <ctrlPoint0 x="529.43854" y="194.84998" xsi:type="point"/>
+    </child>
+    <child ID="29"
+        label="passes query fragment file location information to"
+        layerID="1" created="1445017724541" x="262.1809" y="89.576416"
+        width="450.31906" height="27.531555" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+        <strokeColor>#404040</strokeColor>
+        <textColor>#404040</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7804c0a8010201077f706ff04f74</URIString>
+        <point1 x="262.68094" y="116.60797"/>
+        <point2 x="712.0" y="90.076416"/>
+        <ID1 xsi:type="node">26</ID1>
+        <ID2 xsi:type="node">6</ID2>
+    </child>
+    <child ID="32"
+        label="passes ground truth and Resultset_Summary_RunID_,csv file location information to"
+        layerID="1" created="1445017864908" x="234.6289" y="145.65677"
+        width="485.7373" height="166.58992" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+        <strokeColor>#404040</strokeColor>
+        <textColor>#404040</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71cc7805c0a8010201077f70c845c5fb</URIString>
+        <point1 x="235.12892" y="146.15675"/>
+        <point2 x="719.8662" y="311.74667"/>
+        <ID1 xsi:type="node">26</ID1>
+        <ID2 xsi:type="node">7</ID2>
+    </child>
+    <child ID="36" label="is the final output for" layerID="1"
+        created="1445019056611" x="187.65607" y="176.45497"
+        width="178.12462" height="426.74496" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+        <strokeColor>#404040</strokeColor>
+        <textColor>#404040</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/71d9352bc0a8010201077f70fece4269</URIString>
+        <point1 x="365.2807" y="602.69995"/>
+        <point2 x="188.15608" y="176.95499"/>
+        <ID1 xsi:type="node">23</ID1>
+        <ID2 xsi:type="node">26</ID2>
     </child>
     <layer ID="1" label="Layer 1" created="1444151180559" x="0.0"
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/3e34471cc0a8010201bfefb9573c30ae</URIString>
     </layer>
     <userZoom>1.0</userZoom>
-    <userOrigin x="111.2" y="-168.0"/>
+    <userOrigin x="-105.56145" y="-206.15002"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1444151180555"
             x="0.0" y="0.0" width="1.4E-45" height="1.4E-45"
-            strokeWidth="0.0" autoSized="false" currentIndex="-1" open="true">
+            strokeWidth="0.0" autoSized="false" currentIndex="0" open="true">
             <strokeColor>#B3993333</strokeColor>
             <textColor>#000000</textColor>
             <font>SansSerif-plain-14</font>
