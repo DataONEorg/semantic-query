@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.2.2 concept-map (Tasks_for_R_Code.vue) 2015-10-16 -->
+<!-- Tufts VUE 3.2.2 concept-map (Tasks_for_R_Code.vue) 2015-10-21 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Fri Oct 16 11:11:11 PDT 2015 by Jon and Soph on platform Windows 7 6.1 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: Saved date Wed Oct 21 20:40:56 PDT 2015 by Jon and Soph on platform Windows 7 6.1 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built May 23 2013 at 2146 by tomadm on Linux 2.6.18-348.2.1.el5 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0"
     label="Tasks_for_R_Code.vue" created="1444151180555" x="0.0" y="0.0"
     width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1445019071780" size="26139"
+    <resource referenceCreated="1445485257134" size="26353"
         spec="C:\Users\Jon and Soph\Desktop\SS Doc\UIUC\UCSB\Tasks_for_R_Code.vue"
         type="1" xsi:type="URLResource">
         <title>Tasks_for_R_Code.vue</title>
@@ -23,8 +23,8 @@
         x="712.0" y="65.0" width="104.20001" height="44.0"
         strokeWidth="1.0" autoSized="false" xsi:type="node">
         <notes>Task is accomplished through a R code; the file name for the R Code is "Query_Function.R"%nl;%nl;The output of function is set up to be written to the following directory: '~/dataone/gitcheckout/semantic-query/results/'</notes>
-        <resource referenceCreated="0" accessAttempted="1445018436664"
-            accessSuccessful="1445018436673"
+        <resource referenceCreated="0" accessAttempted="1445485009667"
+            accessSuccessful="1445485009718"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Query_Function.R"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Query_Function.R"/>
@@ -40,8 +40,8 @@
         created="1444151264258" x="718.5" y="306.5" width="125.70001"
         height="52.5" strokeWidth="1.0" autoSized="false" xsi:type="node">
         <notes>Task is accomplished through a R code; the file name for the R Code is "Filter_Merge_Calculate_Funcation.R" %nl;%nl;This same file also contains the codes for the Calculate (Precision/Recall) task.</notes>
-        <resource referenceCreated="0" accessAttempted="1445018610951"
-            accessSuccessful="1445018610960"
+        <resource referenceCreated="0" accessAttempted="1445485154330"
+            accessSuccessful="1445485154339"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"/>
@@ -56,9 +56,9 @@
     <child ID="8" label="Calculate &#xa;(Precision/Recall)" layerID="1"
         created="1444151266888" x="717.5" y="504.0" width="145.70001"
         height="63.5" strokeWidth="1.0" autoSized="false" xsi:type="node">
-        <notes>Task is accomplished through a R code; the file name for the R Code is "Filter_Merge_Calculate_Funcation.R"%nl;%nl;This same file also contains the codes for the Filter/Merge task.%nl;%nl;The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'%nl;%nl;Note: %sp;This code needs to be updated, so that it could take multilpe SOLR_Index_Type for the same Query_ID into account. %sp;The code also needs to ensure all the "To be added" values in the Pre_Recall_Results.txt could be updated accordingly.</notes>
-        <resource referenceCreated="0" accessAttempted="1445018630967"
-            accessSuccessful="1445018630976"
+        <notes>Task is accomplished through a R code; the file name for the R Code is "Filter_Merge_Calculate_Funcation.R"%nl;%nl;This same file also contains the codes for the Filter/Merge task.%nl;%nl;The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'%nl;</notes>
+        <resource referenceCreated="0" accessAttempted="1445386303297"
+            accessSuccessful="1445386303306"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Filter_Merge_Calculate_Function.R"/>
@@ -84,8 +84,8 @@
         created="1444151477045" x="504.0" y="-132.0" width="247.4"
         height="100.4" strokeWidth="1.0" autoSized="true" xsi:type="node">
         <notes>The following are the information included in the "uc52_queries_all_test.csv" file: %sp;%nl;%nl;Query_ID%nl;SOLR_Index_Type%nl;Query_Frag%nl;Ontology_Set_ID</notes>
-        <resource referenceCreated="0" accessAttempted="1445018445647"
-            accessSuccessful="1445018445656"
+        <resource referenceCreated="0" accessAttempted="1445485049075"
+            accessSuccessful="1445485049084"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/lib/queries/uc52_queries_all_test.csv"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/lib/queries/uc52_queries_all_test.csv"/>
@@ -101,11 +101,11 @@
         created="1444151586275" x="973.0" y="27.0" width="298.0"
         height="112.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
         <notes>"RunID" part of the file name is customizable.%nl;%nl;The following are the information included in the "Resultset_Summary_RunID.csv" file (the information in the parenthesis is the potential source for the data; PK = Primary Key): %sp;%nl;%nl;PK %sp; Dataset_ID (SOLR query results)%nl; %sp; %sp; %sp; %sp;R_Time (R)%nl; %sp; %sp; %sp; %sp;D1_node (config file)%nl;PK %sp; Query_ID (input file)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (input file)%nl;PK %sp; Run_ID (Config file)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (Config file)%nl; %nl;Note: Run_ID = DateTime + SOLR_Index_Type</notes>
-        <resource referenceCreated="0" accessAttempted="1445018511720"
-            accessSuccessful="1445018511729"
-            spec="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-12%2017:09:06_.csv"
+        <resource referenceCreated="0" accessAttempted="1445485070586"
+            accessSuccessful="1445485070595"
+            spec="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-20%2016:12:16_.csv"
             type="2" xsi:type="URLResource">
-            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-12%2017:09:06_.csv"/>
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Resultset_Summary_2015-10-20%2016:12:16_.csv"/>
         </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
@@ -170,8 +170,8 @@
         created="1444152135712" x="412.19995" y="352.0" width="214.0"
         height="93.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
         <notes>The following are the information included in the "ground_truth_test.csv" file: %sp;%nl;%nl;Dataset_ID%nl;q1 (boolean)%nl;q2 (boolean)%nl;q3 (boolean)%nl;q4 (boolean)%nl;.%nl;.%nl;.%nl;q10 (boolean)%nl;1 = the dataset ID is a ground truth for the query%nl;0 = the dataset ID is NOT a ground truth for the query</notes>
-        <resource referenceCreated="0" accessAttempted="1445018563615"
-            accessSuccessful="1445018563624"
+        <resource referenceCreated="0" accessAttempted="1445485173138"
+            accessSuccessful="1445485173147"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/lib/ground_truth/ground_truth_test.csv"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/lib/ground_truth/ground_truth_test.csv"/>
@@ -237,13 +237,13 @@
         created="1444152441095" x="269.89996" y="602.69995"
         width="231.20001" height="97.200005" strokeWidth="1.0"
         autoSized="true" xsi:type="node">
-        <notes>The following are the information included in the "Prec_Recall_Results.csv" file (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID (string)%nl;PK %sp; Query_ID (string)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (string)%nl;PK %sp; Run_ID (string)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (string)%nl; %sp; %sp; %sp; %sp;Precision (float)%nl; %sp; %sp; %sp; %sp;Recall (float)%nl;%nl;This is the final output for the Wrapper.%nl;%nl;Note: %sp;This result needs to be updated, so that all the "To be added" values could be updated accordingly.%nl;</notes>
-        <resource referenceCreated="0" accessAttempted="1445018967675"
-            accessSuccessful="1445018967685"
+        <notes>The following are the information included in the "Prec_Recall_Results.csv" file (the information in the parenthesis is the suggested data type; PK = Primary Key)%nl;%nl;PK %sp; Test_Corpus_ID (string)%nl;PK %sp; Query_ID (string)%nl; %sp; %sp; %sp; %sp;SOLR_Index_Type (string)%nl;PK %sp; Run_ID (string)%nl; %sp; %sp; %sp; %sp;Ontology_Set_ID (string)%nl; %sp; %sp; %sp; %sp;Precision (float)%nl; %sp; %sp; %sp; %sp;Recall (float)%nl;%nl;This is the final output for the Wrapper.</notes>
+        <resource referenceCreated="0" accessAttempted="1445485201866"
+            accessSuccessful="1445485201874"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/results/Prec_Recall_Results.txt"
             type="2" xsi:type="URLResource">
-            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Prec_Recall_Results.txt"/>
             <property key="Content.type" value="text/plain"/>
+            <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/results/Prec_Recall_Results.txt"/>
         </resource>
         <fillColor>#DAA9FF</fillColor>
         <strokeColor>#000000</strokeColor>
@@ -252,10 +252,10 @@
         <URIString>http://vue.tufts.edu/rdf/resource/3e34471bc0a8010201bfefb9b7302720</URIString>
         <shape xsi:type="rhombus"/>
     </child>
-    <child ID="24" label="produces" layerID="1" created="1444152513443"
-        x="492.0094" y="556.04236" width="225.99057" height="65.215515"
-        strokeWidth="1.0" autoSized="false" controlCount="0"
-        arrowState="2" xsi:type="link">
+    <child ID="24" label="appends results to" layerID="1"
+        created="1444152513443" x="492.0094" y="556.04236"
+        width="225.99057" height="65.215515" strokeWidth="1.0"
+        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
@@ -268,9 +268,9 @@
     <child ID="26" label="Wrapper" layerID="1" created="1445017577856"
         x="59.438515" y="52.849976" width="212.0" height="139.0"
         strokeWidth="1.0" autoSized="false" xsi:type="node">
-        <notes>By providing the file locations for the query fragment file and the ground truth file, the wrapper is the only functoin that the user needs to run to calculate the recall and precision values .%nl;%nl;The following are the two lines that should be entered in the R environement in order for the "Prec_Recall_Results.csv" file to be generated using the files and functions indicanted in this diagram:%nl;%nl;&gt;source('~/dataone/gitcheckout/semantic-query/src/Precision_Recall_Wrapper.R')%nl;&gt;precicison_recall_wrapper('~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv', '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv')</notes>
-        <resource referenceCreated="0" accessAttempted="1445018376616"
-            accessSuccessful="1445018376625"
+        <notes>By providing the file locations for the query fragment file and the ground truth file, the wrapper is the only functoin that the user needs to run to calculate the recall and precision values .%nl;%nl;The following are the two lines that should be entered in the R environement in order for the "Prec_Recall_Results.txt" file to be generated using the files and functions indicanted in this diagram:%nl;%nl;&gt;source('~/dataone/gitcheckout/semantic-query/src/Precision_Recall_Wrapper.R')%nl;&gt;precicison_recall_wrapper('~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv', '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv')</notes>
+        <resource referenceCreated="0" accessAttempted="1445485132545"
+            accessSuccessful="1445485132554"
             spec="https://github.com/DataONEorg/semantic-query/blob/master/src/Precision_Recall_Wrapper.R"
             type="2" xsi:type="URLResource">
             <property key="URL" value="https://github.com/DataONEorg/semantic-query/blob/master/src/Precision_Recall_Wrapper.R"/>
@@ -294,8 +294,8 @@
     </child>
     <child ID="28"
         label="provides query fragement file and ground truth file location information to"
-        layerID="1" created="1445017656678" x="-51.711166" y="-80.69873"
-        width="351.0" height="146.11429" strokeWidth="1.0"
+        layerID="1" created="1445017656678" x="-51.211166" y="-80.69873"
+        width="350.0" height="146.11429" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
