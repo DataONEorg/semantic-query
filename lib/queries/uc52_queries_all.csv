@@ -1,49 +1,67 @@
 query_id,query_type,query_string
-q1,nat_lang,above ground net primary production in a grassland in dimensions of biomass of plant material (with or without) (area or time)
+q1,nat_lang,above ground net primary production in a grassland in dimensions of biomass of plant material (with or without) (area or duration)
 q1,metacat_ui,grassland above ground net primary production
 q1,full_text,attribute:"net primary production" AND (abstract:"above ground" OR title:"above ground")
-q1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000301 AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_27594
-q1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000301 AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_27594
+q1,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000301 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000503 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000329
+q1,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000301 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000503 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000329
+
+
 q2,nat_lang,heterotrophic soil respiration as carbon dioxide flux in dimensions of (amount or mass) per (area or volume) per time
 q2,metacat_ui,heterotrophic soil respiration
 q2,full_text,(attribute:"soil respiration" AND (attribute:"carbon dioxide" OR attribute:CO2) AND (attribute:time)) AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:soil OR title:soil)
-q2,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ENVO_00001998 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000200 AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_16526
-q2,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000200 AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_16526
-q3,nat_lang,soil carbon soil content in dimensions of (amount or mass) of carbon per (volume of soil or area of surface) 
+q2,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ENVO_00001998 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000200 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323
+q2,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000200 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323
+
+
+q3,nat_lang,soil carbon content in dimensions of (amount or mass) of carbon per (volume of soil or area of surface) 
 q3,metacat_ui,*gram* carbon soil
 q3,full_text,(attribute:carbon AND attribute:*gram*) AND (abstract:soil OR title: soil)
-q3,bioportal_annot,sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_27594 AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/PATO_0000033 AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00001998
-q3,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_27594 AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/PATO_0000033 AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998
+q3,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000___ AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00001998
+q3,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000___ AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998
+
+
 q4,nat_lang,phytoplankton productivity as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
 q4,metacat_ui,phytoplankton productivity
 q4,full_text,attribute:"productivity" AND (attribute:milligramPerMeterSquaredPerDay OR attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton)
-q4,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000021
-q4,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000336 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000021
-q5,nat_lang,concentrations of dissolved carbon dioxide, carbonate or bicarbonate in an aquatic system
+q4,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000504 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000021
+q4,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000504 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000021
+
+
+q5,nat_lang,concentration of dissolved carbon dioxide\, carbonate or bicarbonate in the water of an aquatic system
 q5,metacat_ui,carbon dioxide, carbonate or bicarbonate concentration
 q5,full_text,attribute:concentration AND (attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide") AND (abstract:aquatic OR title:aquatic)
-q5,bioportal_annot,sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/PATO_0000033 AND (sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_16526 OR sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_41609 OR sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_17544) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325)
-q5,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/PATO_0000033 AND (sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_16526 OR sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_41609 OR sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_17544) AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325)
+q5,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000___ AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325)
+q5,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000___ AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325)
+
+
 q6,nat_lang,ecosystem carbon flux in dimensions of (amount or mass) of (carbon dioxide or carbon) per area per time
 q6,metacat_ui,"carbon dioxide" "flux tower"
 q6,full_text,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:"flux tower" OR title:"flux tower")
-q6,bioportal_annot,sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/CHEBI_16526 AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000104  AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000309
-q6,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/CHEBI_16526 AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000014  AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000309
+q6,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323 AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000014  AND em_annotation_bioportal_sm:sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000309
+q6,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323 AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000014  AND em_annotation_esor_sm:sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000309
+
+
 q7,nat_lang,carbon dioxide uptake in an enrichment experiment in dimensions of (amount or mass) of carbon per (area or volume) per time
 q7,metacat_ui,("C02 uptake" OR "carbon dioxide uptake") AND "enrichment experiment" 
 q7,full_text,(attribute:"C02 uptake" or attribute:"carbon dioxide uptake") AND "enrichment experiment"
 q7,bioportal_annot,-9999
 q7,esor_annot,-9999
-q8,nat_lang,growth of trees measured as changes in (diameter, height or curcumference) over time
+
+
+q8,nat_lang,growth of trees measured as changes in (diameter\, height or curcumference or mass) (with or without) duration
 q8,metacat_ui,tree growth
 q8,full_text,((attribute:diameter OR attribute:height OR attribute:circumference) AND attribute:date) AND (abstract:tree OR title:tree)
-q8,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000501 AND (sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/PATO_0001334  OR sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/PATO_0000119  OR sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/PATO_0001648  )
-q8,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000501 AND (sem_annotation_esor_sm:http://purl.odolibrary.org/odo/PATO_0001334  OR sem_annotation_esor_sm:http://purl.odolibrary.org/odo/PATO_0000119  OR sem_annotation_esor_sm:http://purl.odolibrary.org/odo/PATO_0001648  )
+q8,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000501 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000509  OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000511  OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000510  )
+q8,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000501 AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000509  OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000511  OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000510  )
+
+
 q9,nat_lang,net primary production of coastal macroalgae in dimensions of (amount or mass) of carbon per area per time
 q9,metacat_ui,net primary production coastal macroalgae 
 q9,full_text,attribute:"net primary production" AND (abstract:coastal macroalgae OR title:coastal macroalgae)
-q9,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000336 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000031
-q9,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000336 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000031
+q9,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000508 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000021
+q9,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000805 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000021
+
+
 q10,nat_lang,ocean carbon dioxide flux in dimensions of (amount or mass) of carbon per (area or volume) per time
 q10,metacat_ui,ocean carbon dioxide flux
 q10,full_text,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:ocean OR title:ocean)
