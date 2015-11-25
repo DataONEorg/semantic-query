@@ -16,8 +16,8 @@ q2,esor_annot,sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_0000199
 q3,nat_lang,soil carbon content in dimensions of (amount or mass) of carbon per (volume of soil or area of surface) 
 q3,metacat_ui,*gram* carbon soil
 q3,full_text,(attribute:carbon AND attribute:*gram*) AND (abstract:soil OR title: soil)
-q3,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000___ AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00001998
-q3,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000___ AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998
+q3,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000512 AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00001998
+q3,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000329 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000512 AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00001998
 
 
 q4,nat_lang,phytoplankton productivity as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
@@ -30,8 +30,8 @@ q4,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000504 A
 q5,nat_lang,concentration of dissolved carbon dioxide\, carbonate or bicarbonate in the water of an aquatic system
 q5,metacat_ui,carbon dioxide, carbonate or bicarbonate concentration
 q5,full_text,attribute:concentration AND (attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide") AND (abstract:aquatic OR title:aquatic)
-q5,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000___ AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325)
-q5,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000___ AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325)
+q5,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000512 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325) AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00002030
+q5,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000512 AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000325) AND sem_annotation_esor_sm:http://purl.odolibrary.org/odo/ENVO_00002030
 
 
 q6,nat_lang,ecosystem carbon flux in dimensions of (amount or mass) of (carbon dioxide or carbon) per area per time
@@ -44,8 +44,8 @@ q6,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000323 A
 q7,nat_lang,carbon dioxide uptake in an enrichment experiment in dimensions of (amount or mass) of carbon per (area or volume) per time
 q7,metacat_ui,("C02 uptake" OR "carbon dioxide uptake") AND "enrichment experiment" 
 q7,full_text,(attribute:"C02 uptake" or attribute:"carbon dioxide uptake") AND "enrichment experiment"
-q7,bioportal_annot,-9999
-q7,esor_annot,-9999
+q7,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000011 AND sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000506
+q7,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000011 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000506
 
 
 q8,nat_lang,growth of trees measured as changes in (diameter\, height or curcumference or mass) (with or without) duration
