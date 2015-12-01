@@ -1,0 +1,80 @@
+Bryce has written a script for the metadig project called:
+sample-metadata.py
+
+DataONE will use this script to generate a random corpus for query tests
+
+Get it from here:
+https://github.com/NCEAS/metadig/blob/v.2features/sample-metadata.py
+
+aurora.nceas.ucsb.edu has the right python modules.
+
+To use Bryce's code:
+obrien@aurora:~/foo$ ./sample-metadata.py -s 2 --attribute --no-download
+
+gets 2 records per MN, that have attribute metadata, do not download metadata.
+downloading metadata causes a lot of failed requests. 
+
+So far, these are from the LTER and KNB nodes:
+
+[urn:node:LTER][1/2][urn:node:LTER]
+Failed request: https://cn.dataone.org/cn/v1/meta/urn%3Anode%3ALTER
+
+Download metadata later, manually. see below.
+
+Contents of /result/ dir:
+documents.csv
+    a list of all the documents that match the --attribute flag.
+    in MN order.
+    This file is created first, then is sampled later.
+
+shuffled_documents.csv
+    same content as documents.csv, but shuffled within a MN. this file will be read from the top of each MN group to produce the samples.
+
+sampled_documents.csv
+sample of documents.csv that matches -s n (number you chose in the above). from shuffled.
+
+The first time you run the command for any sample-size (-s), it will create a documents.csv of all available docs (ie, with attributes). then, rerun for samples, selecting size. 
+
+To increase sample size, rerun with a bigger number (order and content depend on the file "shuffled_documents.csv")
+
+
+D1 test corpus workflow:
+1. create: 
+      documents.csv and shuffled_documents.csv (DONE)
+      use sample-metadata.py -s 2 --attribute --no-download 
+
+2. pick a number of datasets per MN  you want to start ground-truthing 
+      eg, 40 will yield about 250 total datasets
+      
+3. run ./sample-metadata.py -s 40 --attribute --no-download (DONE)
+
+
+4. cut [id-col] result/sampled_documents.csv > lib/test_corpus_E_dev/test_corpus_E_v0.1.csv
+
+
+5. check into git (semantic-query): 
+      metadig/results (2 files, documents.csv, shuffled_documents.csv)  
+      lib/test_corpus_E_dev/test_corpus_E_v0.1.csv  
+
+      
+6. Download the metadata
+          to test_corpus_E_dev/science_metadata (can be untracked in git)
+          src/download-metadata.sh
+
+7. Ground-truth test_corpus_E_v0.1.csv
+      use a google spreadsheet.
+      check in as needed to lib/ground_truth
+
+If ground-truth does not yield 5 hits per query, repeat from step 3, and create v0.2
+      number must increase, so it includes docs from previous version
+      keep interim work in test_corpus_E_dev
+      
+When ground-truth file has 5 hits per query, query testing can commence
+  check into git
+  lib/test_corpus_E_id_list.txt 
+  groud truth 
+      
+
+
+
+
