@@ -43,13 +43,13 @@ D1 test corpus workflow:
       documents.csv and shuffled_documents.csv (DONE)
       use sample-metadata.py -s 2 --attribute --no-download 
 
-2. pick a number of datasets per MN  you want to start ground-truthing 
+2. pick a number of datasets per MN you want to start ground-truth (DONE) 
       eg, 40 will yield about 250 total datasets
       
 3. run ./sample-metadata.py -s 40 --attribute --no-download (DONE)
 
 
-4. cut [id-col] result/sampled_documents.csv > lib/test_corpus_E_dev/test_corpus_E_v0.1.csv
+4. cut [id-col] result/sampled_documents.csv > lib/test_corpus_E_dev/test_corpus_E_v0.1.csv 
 
 
 5. check into git (semantic-query): 
@@ -63,17 +63,25 @@ D1 test corpus workflow:
 
 7. Ground-truth test_corpus_E_v0.1.csv
       use a google spreadsheet.
-      check in as needed to lib/ground_truth
+      dump and commit as needed to lib/ground_truth
 
 If ground-truth does not yield 5 hits per query, repeat from step 3, and create v0.2
-      number must increase, so it includes docs from previous version
+      number to sample must increase, so it includes ids from previous version
       keep interim work in test_corpus_E_dev
       
 When ground-truth file has 5 hits per query, query testing can commence
-  check into git
-  lib/test_corpus_E_id_list.txt 
-  groud truth 
+
+8. check into git:
+  lib/test_corpus_E_id_list.txt  (final version, renamed)
+  ground truth 
       
+      
+YOU WILL NEED:
+1. mechanism to disregard ids that have already been ground-truthed when you add new ones
+-> simple script
+
+2. train sophie to ground truth.
+
 
 
 
