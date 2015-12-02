@@ -49,7 +49,9 @@ D1 test corpus workflow:
 3. run ./sample-metadata.py -s 40 --attribute --no-download (DONE)
 
 
-4. cut [id-col] result/sampled_documents.csv > lib/test_corpus_E_dev/test_corpus_E_v0.1.csv 
+4. cut [id-col] result/sampled_documents.csv > new_file
+    example: 
+      cut -d ',' -f1 sampled_documents.csv | sed 1d > ../test_corpus_E_v0.1.csv
 
 
 5. check into git (semantic-query): 
