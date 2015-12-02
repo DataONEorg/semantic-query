@@ -57,9 +57,12 @@ D1 test corpus workflow:
       lib/test_corpus_E_dev/test_corpus_E_v0.1.csv  
 
       
-6. Download the metadata
-          to test_corpus_E_dev/science_metadata (can be untracked in git)
+6. Download the metadata (science and/or solr)
+          to test_corpus_E_dev/science_metadata or test_corpus_E_dev/solr_metadata (can be untracked in git)
           src/download-metadata.sh
+            eg, like this:  
+                for id in `cat test_corpus_E_v0.1.txt` ;do ./download_solr.sh $id; done
+
 
 7. Ground-truth test_corpus_E_v0.1.csv
       use a google spreadsheet.
