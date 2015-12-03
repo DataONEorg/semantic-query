@@ -51,7 +51,7 @@ D1 test corpus workflow:
 
 4. cut [id-col] result/sampled_documents.csv > new_file
     example: 
-      cut -d ',' -f1 sampled_documents.csv | sed 1d > ../test_corpus_E_v0.1.csv
+      cut -d ',' -f1 sampled_documents.csv | sed '1d' > ../test_corpus_E_v0.1.csv
 
 
 5. check into git (semantic-query): 
@@ -69,7 +69,9 @@ D1 test corpus workflow:
             better:
                 write xsl templates to extract text bits, which could be used like this: 
                     xsltproc get_attrs.xsl https_pasta.lternet.edu_package_metadata_eml_knb-lter-gce_278_20
-                
+            
+            Or you can always view the original (note: id is not the same as the name of the downloaded solr file in example above. file name has character replacement):
+            https://cn.dataone.org/cn/v1/query/solr/?fl=title,abstract,attribute&q=identifier:%22https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10299/1%22
 
 7. Ground-truth test_corpus_E_v0.1.csv
       use a google spreadsheet.
