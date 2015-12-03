@@ -64,7 +64,12 @@ D1 test corpus workflow:
           src/download-metadata.sh
             eg, like this:  
                 for id in `cat test_corpus_E_v0.1.txt` ;do ./download_solr.sh $id; done
-
+            fastest way to view is in a browser, from a local copy:
+                file:///Volumes/mob/DataONE_semantics_WG/git_checkouts/semantic-query/lib/test_corpus_E_dev/solr_metadata/https_pasta.lternet.edu_package_metadata_eml_knb-lter-gce_278_20
+            better:
+                write xsl templates to extract text bits, which could be used like this: 
+                    xsltproc get_attrs.xsl https_pasta.lternet.edu_package_metadata_eml_knb-lter-gce_278_20
+                
 
 7. Ground-truth test_corpus_E_v0.1.csv
       use a google spreadsheet.
