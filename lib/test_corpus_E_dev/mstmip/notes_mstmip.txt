@@ -1,0 +1,9 @@
+Fool Bryce;s script into thinking this is a query of mstmip docs:
+
+1. save Chris;s email
+2. cp to a temp
+3. edit to remove emial lines
+4. add mn to front of each line, drop leading space, create a csv (chris says mnDemo2)
+  
+[mob@adelie mstmip]$ sed 's/^/mnDemo2/' temp.csv | tr ' ' ',' > documents.csv
+

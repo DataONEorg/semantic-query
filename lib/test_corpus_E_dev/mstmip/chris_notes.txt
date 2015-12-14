@@ -1,0 +1,24 @@
+
+Subject:
+Re: [sem-prov-design] Assemble test corpus for discovery, MNs for MsTMIP, populate with measurement-level metadata (#122)
+From:
+Christopher Jones <notifications@github.com>
+Date:
+12/4/15 8:39 PM
+To:
+DataONEorg/sem-prov-design <sem-prov-design@noreply.github.com>
+CC:
+mobb <mob@msi.ucsb.edu>
+
+@mobb, @mpsaloha
+As we discussed, I've generated NcML metadata from the MsTMIP data files in order to gain access to the variable and attribute-level metadata embedded in the NetCDF files. I've then augmented the FGDC CSDGM science metadata files found on the MsTMIP Member Node for (just about) all of the files (1,437 of 1,511). Some of the files produced blank NcML files, but I'm not sure why.
+Since the MsTMIP Member Node is only a Tier 1 MN, I couldn't update() the old metadata files with the new ones. Instead, I've minted new identifiers and have uploaded the FGDC documents to mn-demo-2. These have all sync'd to the CN now, and are indexed.
+Some caveats:
+
+    About 1/3 of the NcML documents generated were not schema-valid or even well-formed XML because of characters that were in the original NetCDF files that were outside of the UTF-8 encoding. They look to be characters in the Windows 1252 encoding, and I'm guessing were pasted into the NetCDF fields manually (like citation strings with non-ASCII characters. To make this all work, I had to replace these offending characters at the byte level, and I put in a ? instead. You'll see these in some of the FGDC description fields.
+    The MsTMIP folks wrapped all field values in the FGDC with CDATA sections, likely to avoid having to escape XML special characters, etc. I've done the same in the attribute fields to keep it consistent.
+
+I've set up https://search-sandbox-2.test.dataone.org so you can see the documents. Search for MN=mnDemo2, and a keyword of 'mstmip' to get all of the new documents. They are of course viewable from the CN Solr index too, or the raw XML can be viewed from the /object REST endpoint. Cheers.
+
+—
+Reply to this email directly or view it on GitHub.
