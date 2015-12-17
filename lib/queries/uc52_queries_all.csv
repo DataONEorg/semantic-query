@@ -27,7 +27,7 @@ q4,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_
 q4,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000504 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000021
 
 
-q5,nat_lang,concentration of dissolved carbon dioxide\, carbonate or bicarbonate in the water of an aquatic system
+q5,nat_lang,concentration of dissolved carbon dioxide carbonate or bicarbonate in the water of an aquatic system
 q5,metacat_ui,carbon dioxide, carbonate or bicarbonate concentration
 q5,full_text,attribute:concentration AND (attribute:"*carbonate" or attribute:"C02" or attribute:"carbon dioxide") AND (abstract:aquatic OR title:aquatic)
 q5,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000512 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000323 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326) AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000326 OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000325) AND sem_annotation_bioportal_sm:http://purl.odolibrary.org/odo/ENVO_00002030
@@ -48,7 +48,7 @@ q7,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_
 q7,esor_annot,sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000011 AND sem_annotation_esor_sm:http://purl.dataone.org/odo/ECSO_00000506
 
 
-q8,nat_lang,growth of trees measured as changes in (diameter\, height or curcumference or mass) (with or without) duration
+q8,nat_lang,growth of trees measured as changes in (diameter height or curcumference or mass) (with or without) duration
 q8,metacat_ui,tree growth
 q8,full_text,((attribute:diameter OR attribute:height OR attribute:circumference) AND attribute:date) AND (abstract:tree OR title:tree)
 q8,bioportal_annot,sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000501 AND (sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000509  OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000511  OR sem_annotation_bioportal_sm:http://purl.dataone.org/odo/ECSO_00000510  )
