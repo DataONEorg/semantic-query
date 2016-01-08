@@ -1,4 +1,3 @@
-identifier
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/5853/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/4816/2
 knb-lter-sgs.161.12
@@ -29,14 +28,11 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/14628/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/7963/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/481/10
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1119/3
- the General Public Usedu/package/metadata/eml/ecotrends/1539/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-cdr/54/2
-n      /pasta.lternet.edu/package/metadata/eml/ecotrends/3203/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/1649/6
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/8337/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/12142/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/5821/2
-ements  Datasets released by EcoTrends will be accompads/10961/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/1493/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/411/13
 doi:10.6085/AA/CE015X_015MTBD010R00_20050801.50.5
@@ -579,7 +575,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1077/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-cce/14/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/232/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1119/4
-Acceptanpasta.lternet.edu/package/metadata/eml/ecotrends/2844/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/165/22
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/460/8
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1108/1
@@ -635,7 +630,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/417/5
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1150/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/80/32
-Accepta/pasta.lternet.edu/package/metadata/eml/ecotrends/2981/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/4004/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/178/20
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/113/5
@@ -650,7 +644,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1195/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/77/37
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/61/4
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1101/3
-Accepta/pasta.lternet.edu/package/metadata/eml/ecotrends/1650/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/26/9
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/562/4
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1092/4
@@ -776,13 +769,11 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/101/8
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/51/30
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/127/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1069/5
-Acceptapasta.lternet.edu/package/metadata/eml/ecotrends/2325/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1214/5
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/84/36
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1051/10
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/344/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/299/1
-cceptan/pasta.lternet.edu/package/metadata/eml/ecotrends/3225/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/7/19
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1136/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/481/5
@@ -888,7 +879,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-vcr/20/17
 knb-lter-sgs.163.12
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-cwt/3060/13
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/2739/2
-
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-cdr/38/1
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/5319/2
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/10185/2
@@ -1204,21 +1194,21 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6001/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6002/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6003/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/75/204
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/122/18
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/123/18
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/428/14
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/455/13
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3137/7
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/190/20
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/207/18
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/75/204
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/122/18
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/123/18
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/428/14
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/455/13
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3137/7
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/190/20
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/207/18
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/68/21
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/21/15
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/37/4
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/55/2
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/57/5
-"https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/58/7
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/21/15
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/37/4
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/55/2
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/57/5
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/58/7
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/130/13
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/194/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10151/4
