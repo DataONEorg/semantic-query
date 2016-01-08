@@ -1,0 +1,61 @@
+Assemble spreadhseet for holding manual annotations
+
+Goal is to annotate all attributes, all datasets in corpus E.
+Total in "annotator_spreadsheet_template.txt" is 17589, which is too many to do all in one pass, so set 
+priorities.
+
+Priority 1: datasets matching test queries + carbon cyclying datasets that do not match any query.
+Priority 2: attributes that have classes available in ECSO
+Priority 3: TBD
+some attributes are not likely to be annotated
+
+
+
+overall:
+select datassets from the corpus E ground truth spreadsheet. match selected datasets with the template having all corpus E attributes to the priority datasets.
+
+Prep:
+1. select datasets for current grouping (priority) in google spreadsheet
+
+Assemble input files:
+A. the annotation template with all attributes listed
+2. have a copy of ben's template (annotator_spreadsheet_template.txt)
+3.add empty column to front of each row of template (so you can match on col2)
+
+<code> 
+ sed 's/^/NA\t/' annotator_spreadsheet_template.txt > annotator_spreadsheet_template_for_awkmatch.txt 
+</code>
+
+selected datasets, with priority
+4. export spreadsheet as TAB sep
+5. cut to usable size for merge, filter rows with current priority
+adjust the grep pipe for other priorities, eg a '2' at the end of the line indicates priority 2. create other lists for later groups of datasets
+
+<code>
+  cut  -f1-13 ground_truth_test_corpus_E\ -\ FINAL.tsv  | grep 1$ | cut -f 1,2 > node_id_priority1.tsv
+</code>
+
+
+
+6. match  
+
+<code>
+ awk 'NR==FNR { h[$2] = $1 ; next} {print h[$2],$0}' node_id_priority1.tsv annotator_spreadsheet_template_for_awkmatch.txt |  grep -v '^ NA' > matched_template_priority1.tsv 
+</code>
+
+
+7. upload to online spreadsheet, annotate.
+[ shared doc in the sem-discovery google drive folder ]
+
+8. when annotated, export, trim as needed, commit
+
+
+
+8. Commit to git:
+these instructions
+original template from Ben (from step 2)
+template for match (with extra col, from step 3)
+list for spec'd priority (step 4)
+annotation template (step 6)
+annotations (step 7)
+
