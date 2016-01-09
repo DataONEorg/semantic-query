@@ -46,16 +46,29 @@ adjust the grep pipe for other priorities, eg a '2' at the end of the line indic
 
 7. upload to online spreadsheet, annotate.
 [ shared doc in the sem-discovery google drive folder ]
+probably adding cols for scope, classids, etc.
 
 8. when annotated, export, trim as needed, commit
 
 
 
 8. Commit to git:
-these instructions
-original template from Ben (from step 2)
-template for match (with extra col, from step 3)
-list for spec'd priority (step 4)
-annotation template (step 6)
-annotations (step 7)
+these instructions 
+	how_to_prep_manual_annotations.txt
+	
+original template from Ben (from step 2) 
+	annotator_spreadsheet_template.txt
 
+template for match (with extra col, from step 3) 
+	annotator_spreadsheet_template_for_awkmatch.txt
+
+exported ground truth with priority: (step 5 intermediate) cols chopped, filtered for priority
+
+list for spec'd priority (step 5) 
+	node_id_priority1.tsv
+
+annotation template (step 6) 
+	matched_template_priority1.tsv
+
+annotations (step 7)
+	TBD
