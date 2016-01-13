@@ -1,0 +1,101 @@
+URL,Frequency,label
+http://purl.obolibrary.org/obo/UO_0000008,2318,meter
+http://purl.obolibrary.org/obo/ENVO_00002006,1780,water
+http://purl.dataone.org/odo/ECSO_00000515,1706,depth
+https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Data,1513,Data
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample,1478,Sample
+http://purl.obolibrary.org/obo/ENVO_00000264,1163,seamount
+http://purl.obolibrary.org/obo/ENVO_00000100,1136,valley
+http://purl.obolibrary.org/obo/UO_0000036,1121,year
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Name,944,Name
+http://purl.org/dc/terms/date,936,Date
+http://purl.obolibrary.org/obo/PATO_0000146,931,temperature
+http://purl.obolibrary.org/obo/UBERON_0000020,816,sense organ
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement,747,Measurement
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Standard,731,Standard
+http://purl.obolibrary.org/obo/ENVO_00000020,693,lake
+http://purl.obolibrary.org/obo/UO_0000033,684,day
+http://purl.dataone.org/odo/ECSO_00000313,656,Species
+http://purl.obolibrary.org/obo/ENVO_00000033,621,pond
+http://www.w3.org/ns/prov#used,594,used
+http://purl.obolibrary.org/obo/UO_0000099,569,liter
+http://purl.dataone.org/odo/ECSO_00000518,554,temperature
+http://purl.obolibrary.org/obo/PATO_0000165,552,time
+http://purl.obolibrary.org/obo/ENVO_00000109,543,woodland
+http://purl.obolibrary.org/obo/UO_0000035,509,month
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Within,499,Within
+http://purl.org/dc/terms/Location,496,Location
+http://purl.obolibrary.org/obo/UO_0000010,488,second
+http://purl.obolibrary.org/obo/ENVO_00000167,484,bar
+http://purl.obolibrary.org/obo/ENVO_00000309,477,depression
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Decimal,475,Decimal
+http://purl.obolibrary.org/obo/UO_0000009,461,kilogram
+http://purl.obolibrary.org/obo/UO_0000003,455,time unit
+http://www.w3.org/ns/prov#value,454,value
+http://purl.obolibrary.org/obo/PATO_0001025,441,pressure
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation,437,Observation
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Plot,435,Plot
+http://purl.obolibrary.org/obo/ENVO_00000106,397,grassland
+http://purl.dataone.org/odo/ECSO_00000512,389,concentration
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#During,386,During
+http://www.w3.org/ns/prov#Collection,384,Collection
+http://purl.obolibrary.org/obo/ENVO_00000114,365,agricultural field
+http://purl.obolibrary.org/obo/UO_0000021,361,gram
+http://purl.dataone.org/odo/ECSO_00000523,353,pressure
+http://purl.obolibrary.org/obo/PCO_0000018,347,collection of organisms of the same species
+http://purl.obolibrary.org/obo/UO_0000096,343,cubic meter
+http://purl.obolibrary.org/obo/UO_0000089,317,cubic meter per mole
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Type,315,Type
+http://purl.obolibrary.org/obo/ENVO_01000635,308,land
+http://purl.obolibrary.org/obo/UO_0000022,307,milligram
+http://purl.obolibrary.org/obo/UO_0000080,300,square meter
+https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Plant,300,Plant
+http://purl.obolibrary.org/obo/ENVO_00001998,289,soil
+http://purl.dataone.org/odo/ECSO_00000511,272,height
+http://purl.obolibrary.org/obo/ENVO_00000087,266,cliff
+http://purl.obolibrary.org/obo/UO_0000032,265,hour
+http://purl.obolibrary.org/obo/UO_0000309,260,milligram per square meter
+http://purl.obolibrary.org/obo/UO_0000093,254,cubic meter per kilogram
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Transect,253,Transect
+http://purl.obolibrary.org/obo/PATO_0001323,251,area
+http://purl.obolibrary.org/obo/UO_0000063,240,millimolar
+http://purl.obolibrary.org/obo/UBERON_0002416,239,integumental system
+http://purl.obolibrary.org/obo/UO_0000031,236,minute
+http://purl.org/spar/datacite/Identifier,236,identifier
+http://purl.obolibrary.org/obo/NCBITaxon_1,234,root
+http://purl.obolibrary.org/obo/ENVO_01000584,232,table
+http://purl.obolibrary.org/obo/ENVO_00000475,230,inlet
+http://purl.obolibrary.org/obo/ENVO_00000098,221,island
+http://www.w3.org/ns/prov#End,220,End
+http://purl.org/dc/terms/description,219,Description
+http://purl.obolibrary.org/obo/ENVO_01000155,218,organic material
+http://purl.obolibrary.org/obo/UO_0000299,213,micro
+http://purl.obolibrary.org/obo/ENVO_00002874,210,air conditioning unit
+http://purl.obolibrary.org/obo/ENVO_00000040,208,waterfall
+http://purl.obolibrary.org/obo/ENVO_00000477,202,mount
+http://purl.obolibrary.org/obo/PATO_0000573,187,increased length
+http://purl.dataone.org/odo/ECSO_00000501,187,Tree
+http://purl.obolibrary.org/obo/PATO_0001824,184,dry
+http://purl.obolibrary.org/obo/ENVO_00000176,184,elevation
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Oxygen,184,Oxygen
+http://purl.obolibrary.org/obo/ENVO_00002010,168,saline water
+http://purl.obolibrary.org/obo/ENVO_00000305,160,peninsula
+http://purl.obolibrary.org/obo/PATO_0001986,159,dissolved
+http://purl.obolibrary.org/obo/CHEBI_15377,158,water
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#After,156,After
+http://purl.obolibrary.org/obo/ENVO_00002000,155,slope
+http://purl.obolibrary.org/obo/ENVO_00000015,152,ocean
+http://purl.obolibrary.org/obo/UO_0000000,151,unit
+http://www.w3.org/ns/prov#Person,147,Person
+http://purl.obolibrary.org/obo/ENVO_00000122,141,track
+http://purl.obolibrary.org/obo/RO_0002577,136,system
+http://purl.obolibrary.org/obo/PATO_0000001,133,quality
+http://purl.org/dc/terms/,130,
+http://purl.obolibrary.org/obo/UBERON_0001474,130,bone element
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Carbon,128,Carbon
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Nitrogen,121,Nitrogen
+http://purl.obolibrary.org/obo/PATO_0000122,120,length
+http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Cell,118,Cell
+http://purl.dataone.org/odo/ECSO_00000526,115,group
+http://purl.obolibrary.org/obo/ENVO_00000268,114,lake bed
+http://purl.dataone.org/odo/ECSO_00000323,113,Carbon Dioxide
