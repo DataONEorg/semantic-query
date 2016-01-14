@@ -49,6 +49,11 @@ adjust the grep pipe for other priorities, eg a '2' at the end of the line indic
 probably adding cols for scope, classids, etc.
 
 8. when annotated, export, trim as needed, commit
+ cat spreadsheet_export_20160109.tsv | sed 's/ NA//' | cut -f1,2,3,4,6 | sed 's/36$//' > annotations_man_priority1.tsv
+ 
+ (count number with annotations:
+ tr '\11' ',' <  annotations_man_priority1.tsv | grep -vc ',$'
+)
 
 
 
@@ -63,12 +68,15 @@ template for match (with extra col, from step 3)
 	annotator_spreadsheet_template_for_awkmatch.txt
 
 exported ground truth with priority: (step 5 intermediate) cols chopped, filtered for priority
+ground_truth_test_corpus_w_priority1.csv
 
 list for spec'd priority (step 5) 
-	node_id_priority1.tsv
+	node_id_priority1.tsvground_truth_test_corpus_w_priority1.csv
 
 annotation template (step 6) 
 	matched_template_priority1.tsv
 
-annotations (step 7)
-	TBD
+annotations (step 8, stored in the dev dir till done.)
+	annotations_man_priority1.tsv
+	
+	
