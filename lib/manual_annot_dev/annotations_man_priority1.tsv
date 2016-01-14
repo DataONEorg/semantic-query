@@ -1,4 +1,4 @@
-mn	pkg_id	ent_no	attr_no	1715
+mn	pkg_id	ent_no	attr_no	class_id_int
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2	1	1	519
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2	1	2	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2	1	3	513
@@ -1761,7 +1761,7 @@ urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	4	519
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	5	519
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	6	519
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	7	abundance
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	7	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	8	521
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	9	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/461/13	1	1	
@@ -1791,10 +1791,10 @@ urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	7	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	8	511
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	9	511
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	10	flow rate
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	10	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	11	519
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	12	515
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	13	flow rate
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/118/6	1	13	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/4	1	1	519
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/4	1	2	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/4	1	3	519
@@ -1970,7 +1970,7 @@ urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	16	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	17	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	18	
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	19	dpm
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	19	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	20	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/103/31	1	21	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1158/2	1	1	519
@@ -2194,11 +2194,11 @@ urn:node:SANPARKS	judithk.1264.2	1	6	521
 urn:node:SANPARKS	judithk.1264.2	1	7	
 urn:node:SANPARKS	judithk.1264.2	2	1	519
 urn:node:SANPARKS	judithk.1264.2	2	2	519
-urn:node:SANPARKS	judithk.1264.2	2	3	ratio
-urn:node:SANPARKS	judithk.1264.2	2	4	ratio
-urn:node:SANPARKS	judithk.1264.2	2	5	ratio
-urn:node:SANPARKS	judithk.1264.2	2	6	ratio
-urn:node:SANPARKS	judithk.1264.2	2	7	ratio
+urn:node:SANPARKS	judithk.1264.2	2	3	
+urn:node:SANPARKS	judithk.1264.2	2	4	
+urn:node:SANPARKS	judithk.1264.2	2	5	
+urn:node:SANPARKS	judithk.1264.2	2	6	
+urn:node:SANPARKS	judithk.1264.2	2	7	
 urn:node:SANPARKS	judithk.1264.2	2	8	
 urn:node:SANPARKS	judithk.1264.2	3	1	519
 urn:node:SANPARKS	judithk.1264.2	3	2	515
@@ -2267,7 +2267,7 @@ urn:node:SANPARKS	judithk.1000.13	7	2	519
 urn:node:SANPARKS	judithk.1000.13	7	3	519
 urn:node:SANPARKS	judithk.1000.13	7	4	
 urn:node:SANPARKS	judithk.1000.13	7	5	519
-urn:node:SANPARKS	judithk.1000.13	7	6	boolean
+urn:node:SANPARKS	judithk.1000.13	7	6	
 urn:node:SANPARKS	judithk.1000.13	8	1	519
 urn:node:SANPARKS	judithk.1000.13	8	2	519
 urn:node:SANPARKS	judithk.1000.13	8	3	519
@@ -2280,7 +2280,7 @@ urn:node:SANPARKS	judithk.1000.13	9	2	519
 urn:node:SANPARKS	judithk.1000.13	9	3	519
 urn:node:SANPARKS	judithk.1000.13	9	4	519
 urn:node:SANPARKS	judithk.1000.13	9	5	509
-urn:node:SANPARKS	judithk.1000.13	9	6	boolean
+urn:node:SANPARKS	judithk.1000.13	9	6	
 urn:node:SANPARKS	judithk.1000.13	10	1	519
 urn:node:SANPARKS	judithk.1000.13	10	2	519
 urn:node:SANPARKS	judithk.1000.13	10	3	519
