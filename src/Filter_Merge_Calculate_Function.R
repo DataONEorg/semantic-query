@@ -19,12 +19,14 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
   #gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
+  #gtFileLocation <- '~/dataone/gitcheckout/semantic-query/lib/ground_truth/test_corpus_e_groundtruth_carbon_flux_queries.csv'
   
   groundTruthDF <- read.csv(gtFileLocation, header = T, sep = ",", stringsAsFactors = F)
 
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
   #outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2015-10-20 16:12:16_.csv'
+  #outputFileLocation <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary_2016-01-15 18:34:14_.csv'
   
   queryResultDF <- read.csv(outputFileLocation, header = T, sep = ",", stringsAsFactors = F)
   
@@ -42,7 +44,7 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
   #This variable will need to be adjusted as we finalize the definition of the values for SOLR_Index_Type
-  solrtypecolumns <- c("full_text","metacat_ui")
+  solrtypecolumns <- c("nat_lang", "full_text", "metacat_ui", "metacat_filtered", "bioportal_annot", "esor_annot")
   
   # Initialize an output data frame with the proper columns
   RP_Result <- data.frame(Test_Corpus_ID = character(0), Query_ID = character(0), SOLR_Index_Type = character(0), Run_ID = character(0), Ontology_Set_ID = character(0), Precision = character(0), Recall = character(0),
@@ -54,7 +56,8 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   
   for (n in querycolumns) {
     
-    #n <- "q1"
+    ##
+    #n <- "q2"
    
     #Count the total number of Relevant dataset for a specific query from the ground truth
     queryOfInterest <- which( colnames(filtered_merged_result) == n )
@@ -66,25 +69,30 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
       Relevant_Retrieved_Counter <- 0
       IRRelevant_Retrieved_Counter <- 0
       Relevant_NotRetrieved_Counter <- 0
-      counter <- 1
+      #counter <- 1
     
       for (i in 1:nrow(filtered_merged_result)) {
       
         if((filtered_merged_result[i,"SOLR_Index_Type"]) == j || (filtered_merged_result[i,"SOLR_Index_Type"]) == 0)
         {
           
-          if (counter == 1)
-          {
-            test_corpus_id <- gtFileLocation
-            run_id <- filtered_merged_result[i,"Run_ID"]
-            ontology_set_id <- filtered_merged_result[i,"Ontology_Set_ID"]
-          }
+          #if (counter == 1)
+          #{
+            #test_corpus_id <- gtFileLocation
+            #run_id <- filtered_merged_result[i,"Run_ID"]
+            #ontology_set_id <- filtered_merged_result[i,"Ontology_Set_ID"]
+            
+          #}
           
           #Count the number of Relevant and Retrieved dataset for a specific query (e.g. q1)
           if((filtered_merged_result[i,"Query_ID"]) == n && (filtered_merged_result[i,n]) == 1)
           { 
             #print(filtered_merged_result[i,"Dataset_ID"])
             Relevant_Retrieved_Counter <- Relevant_Retrieved_Counter + 1
+            
+            run_id <- filtered_merged_result[i,"Run_ID"]
+            ontology_set_id <- filtered_merged_result[i,"Ontology_Set_ID"]
+            
           }
       
           #Count the number of IRRelevant and Retrieved dataset for a specific query (e.g. q1)
@@ -103,7 +111,8 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
         }
       
       }
-    
+      
+      #
       #print("The query is:")
       #print(n)
       #print("The SOLR index type is:")
@@ -116,24 +125,34 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
       #print(IRRelevant_Retrieved_Counter)
       #print("The total number of relevant and NOT retrieved dataset is:")
       #print(Relevant_NotRetrieved_Counter)
+      #
     
       if(length(totalRelevantRecords) == 0) {
         #print("There are no relevant dataset for this query from the ground truth")
         Recall <- "Not Applicable"
         Precision <- "Not Applicable"
+        test_corpus_id <- gtFileLocation
+        run_id <- "N/A"
+        ontology_set_id <- "N/A"
       } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
         Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
         Precision <- "Not Applicable"
+        test_corpus_id <- gtFileLocation
+        run_id <- "N/A"
+        ontology_set_id <- "N/A"
       } else {
         Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
         Precision <- (Relevant_Retrieved_Counter / (Relevant_Retrieved_Counter + IRRelevant_Retrieved_Counter))*100
+        test_corpus_id <- gtFileLocation
       }
       
+      #
       #print("Recall for this query is: ")
       #print(Recall)
       #print("Precision for this query is: ")
       #print(Precision)
-    
+      #
+      
       if (line_counter == '1'){
 
         test <- data.frame(test_corpus_id, n, j, run_id, ontology_set_id, as.character(Precision), as.character(Recall))
@@ -146,11 +165,12 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
       }
   
       line_counter <- line_counter + 1
-      counter <- counter + 1
+      #counter <- counter + 1
     }
   }
 
   # Write out the results as a Tab Delimited Text File file, so append could be used
+  #write.table(test2, "~/Prec_Recall_Results.txt", append = T, sep = " ", row.names=F)
   write.table(test2, "~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt", append = T, sep = " ", row.names=F)
   
   finaloutputFileLocation = "~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt"
