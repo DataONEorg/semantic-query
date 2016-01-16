@@ -129,14 +129,14 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     
       if(length(totalRelevantRecords) == 0) {
         #print("There are no relevant dataset for this query from the ground truth")
-        Recall <- "Not Applicable"
-        Precision <- "Not Applicable"
+        Recall <- "No Relevant Datasets in the Ground Truth"
+        Precision <- "No Relevant Datasets in the Ground Truth"
         test_corpus_id <- gtFileLocation
         run_id <- "N/A"
         ontology_set_id <- "N/A"
       } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
         Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
-        Precision <- "Not Applicable"
+        Precision <- "Number of Relevant Datasets Retrieved = 0 and Number of Irrelevant Datasets Retrieved = 0"
         test_corpus_id <- gtFileLocation
         run_id <- "N/A"
         ontology_set_id <- "N/A"
