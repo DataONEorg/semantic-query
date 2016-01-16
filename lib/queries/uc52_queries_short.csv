@@ -1,0 +1,13 @@
+Query_ID,SOLR_Index_Type,Query_Frag,Ontology_Set_ID
+q1,nat_lang,above ground net primary production in a grassland in dimensions of biomass of plant material (with or without) (area or duration),None
+q1,metacat_ui,grassland above ground net primary production,None
+q1,metacat_filtered,grassland AND attribute:"above ground net primary production",None
+q1,full_text,attribute:"net primary production" AND (abstract:"above ground" OR title:"above ground"),None
+q1,bioportal_annot,sem_annotation_bioportal_sm:"http://purl.dataone.org/odo/ECSO_00000533",None
+q1,esor_annot,sem_annotation_esor_sm:"http://purl.dataone.org/odo/ECSO_00000533",None
+q2,nat_lang,heterotrophic soil respiration as carbon dioxide flux in dimensions of (amount or mass) per (area or volume) per time,None
+q2,metacat_ui,heterotrophic soil respiration,None
+q2,metacat_filtered,soil AND (attribute:"respiration" AND (attribute:"carbon dioxide" OR attribute:CO2)),None
+q2,full_text,(attribute:"soil respiration" AND (attribute:"carbon dioxide" OR attribute:CO2) AND (attribute:time)) AND (abstract:heterotrophic OR title:heterotrophic) AND (abstract:soil OR title:soil),None
+q2,bioportal_annot,sem_annotation_bioportal_sm:"http://purl.dataone.org/odo/ECSO_00000532",None
+q2,esor_annot,sem_annotation_esor_sm:"http://purl.dataone.org/odo/ECSO_00000532",None
