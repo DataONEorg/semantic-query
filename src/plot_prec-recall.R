@@ -6,18 +6,17 @@ plot_pr <- function() {
     pr$Precision[is.na(pr$Precision)] <- 0
     
     # Precision
-    #p <- ggplot(pr)
-    #p + geom_bar(aes(x=SOLR_Index_Type, y=Precision), stat = "summary", fun.y = "mean")
     p <- ggplot(pr, aes(SOLR_Index_Type, Precision)) + 
         stat_summary(fun.y = mean, geom = "bar") + 
-        stat_summary(fun.data = mean_se, geom = "errorbar")
+        stat_summary(fun.data = mean_se, geom = "errorbar") + 
+        geom_jitter(color="red")
     ggsave("pr-plot-precision.pdf", plot=p, width=12, height=12)
     
     # Recall
-    #r <- ggplot(pr)
-    #r + geom_bar(aes(x=SOLR_Index_Type, y=Recall), stat = "summary", fun.y = "mean")
     r <- ggplot(pr, aes(SOLR_Index_Type, Recall)) + 
-        stat_summary(fun.y = mean, geom = "bar") + 
-        stat_summary(fun.data = mean_se, geom = "errorbar")
+        stat_summary(fun.y = mean, geom = "bar", color="white") + 
+        stat_summary(fun.data = mean_se, geom = "errorbar") +
+        geom_jitter(color="red")
+    r
     ggsave("pr-plot-recall.pdf", plot=r, width=12, height=12)
 }
