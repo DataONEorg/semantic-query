@@ -44,7 +44,7 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
   #This variable will need to be adjusted as we finalize the definition of the values for SOLR_Index_Type
-  solrtypecolumns <- c("nat_lang", "full_text", "metacat_ui", "metacat_filtered", "bioportal_annot", "esor_annot")
+  solrtypecolumns <- c("nat_lang", "full_text", "metacat_ui", "metacat_filtered", "bioportal_annot", "esor_annot", "manual_annot")
   
   # Initialize an output data frame with the proper columns
   RP_Result <- data.frame(Test_Corpus_ID = character(0), Query_ID = character(0), SOLR_Index_Type = character(0), Run_ID = character(0), Ontology_Set_ID = character(0), Precision = character(0), Recall = character(0),
