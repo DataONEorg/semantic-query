@@ -1,0 +1,15 @@
+Number of Member Nodes,Name of Member Node,Total Datasets per Member Node,Total Attribute per Member Node
+1,nalytide:LTER NA,1,13
+2,urn:node:CLOEBIRD NA,1,25
+3,urn:node:GLEON NA,5,337
+4,urn:node:GOA NA,9,255
+5,urn:node:KNB NA,61,2525
+6,urn:node:LTER NA,407,10550
+7,urn:node:NKN NA,1,5
+8,urn:node:NMEPSCOR NA,1,26
+9,urn:node:ONEShare NA,69,320
+10,urn:node:PISCO NA,42,240
+11,urn:node:SANPARKS NA,38,1171
+12,urn:node:TERN NA,68,1289
+13,urn:node:TFRI NA,28,558
+14,urn:node:USANPN NA,2,62
