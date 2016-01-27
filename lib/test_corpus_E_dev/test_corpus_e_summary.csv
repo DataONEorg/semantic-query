@@ -1,0 +1,15 @@
+row_num,mn_name,dataset_count,attribute_count
+1,nalytide:LTER,1,13
+2,urn:node:CLOEBIRD,1,25
+3,urn:node:GLEON,5,337
+4,urn:node:GOA,9,255
+5,urn:node:KNB,61,2525
+6,urn:node:LTER,407,10550
+7,urn:node:NKN,1,5
+8,urn:node:NMEPSCOR,1,26
+9,urn:node:ONEShare,69,320
+10,urn:node:PISCO,42,240
+11,urn:node:SANPARKS,38,1171
+12,urn:node:TERN,68,1289
+13,urn:node:TFRI,28,558
+14,urn:node:USANPN,2,62
