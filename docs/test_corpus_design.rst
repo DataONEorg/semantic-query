@@ -28,36 +28,42 @@ Guidelines
 
 Test Corpus Descriptions
 ------------------------
-Test Corpus C:
+**Test Corpus C**:
 Used only to develop query code in R. Corpus C is all the datasets from SBC LTER
 that were in cn-sandbox-2 in March 2015.  
 There are matches to 4 queries: 4, 5, 9 10. By choosing all datasets, we know there are
 datasets that match some queries (but not all), and also datasets that match
 no queries. We will us this corpus only to test query code in R.
 
-Test Corpus D:
+**Test Corpus D**:
 This is the first "real" test corpus. It includes all datasets from 4 LTER sites, 2 aquatic
 and 2 forested sites. There are expected to be datasets that match at least half the queries. 
 
-Test Corpus E:
-departure for previous plan. 
+**Test Corpus E:**
+departure for previous plan. DataONE leadership wants a test corpus that is representative of holdings in the production DataONE repository. LTER datasets are not representative, in that they are all EML, and have generally high-quality metadata. 
+
+Test Corpus E will be assembled from a random selection of all datasets in DataONE. 
 
 
-Table lists defined corpora, and queries they match.
 
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus A  |   -                       | preliminary use, see issue #46                                   |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus B  |  -                        | preliminary use, see issue #46                                   |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus C  | SBC                       | query code development only. has ground truth complete           |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus D  | SBC, NTL, AND, BNZ        | matches queries 1, 4, 5, 9, 10, 2, 6, (with ground truth)        |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus E  |  random subsample of D1   | matches all queries                                              |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus F  |                           |   TBD                                                            |
-+--------------+---------------------------+------------------------------------------------------------------+
-| Corpus G  |                           |   TBD                                                            |
-+--------------+---------------------------+------------------------------------------------------------------+
+Test Corpus Summary.
+
+
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Name     | Composition                                                            |Usage                                                       |
++==========+========================================================================+============================================================+
+| Corpus A |N.A.                                                                    | preliminary use, see issue #46                             |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus B |N.A.                                                                    | preliminary use, see issue #46                             |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus C | SBC LTER, all                                                          | query code development only. has ground truth complete     |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus D | SBC, NTL, AND, BNZ - all datasets                                      | matches queries 1, 4, 5, 9, 10, 2, 6, (with ground truth)  |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus E | random subsample of D1, production, with attribute-level metadata      | matches all queries                                        |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus F | Corpus E, datasets in EML namespace                                    | matches all queries                                        |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
+| Corpus G | TBD                                                                    | TBD                                                        |
++----------+------------------------------------------------------------------------+------------------------------------------------------------+
 
