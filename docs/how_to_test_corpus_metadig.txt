@@ -95,6 +95,29 @@ YOU WILL NEED:
 2. train sophie to ground truth.
 
 
+-----
+Other notes:
+The bulk of the pisco data are from oceanographic instruments. Get the code for the instruments with this cmd:
+	grep 10.6085 ../test_corpus_E_dev/test_corpus_E_v0.1.txt |cut -d'/' -f3 | cut -d'.' -f1  | cut -d'_' -f1-2 | cut -c 11-14 | sort| uniq
 
+ADCP = ADCP
+IBTN
+ITBD
+ITBP
+ITV2
+MHP2
+MTBD
+MTV2
+MXTI = thermistor 
 
+screening:
+three templates:
+ ../../../lib/xsl/get_title_solr.xsl
+ ../../../lib/xsl/get_abstract_solr.xsl
+ ../../../lib/xsl/get_attrs_solr.xsl
 
+run in batches:
+[mob@adelie solr_metadata]$ for file in `ls doi_10.5063_F1`; do xsltproc ../../../lib/xsl/get_attrs_solr.xsl $file; done | m
+
+or individually:
+xsltproc ../../../lib/xsl/get_attrs_solr.xsl 
