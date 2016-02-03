@@ -7,3 +7,10 @@ Fool Bryce;s script into thinking this is a query of mstmip docs:
   
 [mob@adelie mstmip]$ sed 's/^/mnDemo2/' temp.csv | tr ' ' ',' > documents.csv
 
+[mob@adelie mstmip]$ mkdir results
+[mob@adelie mstmip]$ mv documents.csv results/
+
+be sure to add the header. duh.
+ok, now it works, but be on aurora:
+
+obrien@aurora:~/DataONE/git-checkouts/semantic-query/lib/test_corpus_E_dev/mstmip$ ./sample-metadata py -s 40 --attribute --no-download 
