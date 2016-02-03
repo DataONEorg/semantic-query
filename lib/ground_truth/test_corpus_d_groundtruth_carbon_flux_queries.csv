@@ -156,10 +156,10 @@ Item No.,id,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10
 155,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/69/1,0,0,0,0,0,0,0,0,0,0
 156,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/70/1,0,0,0,0,0,0,0,0,0,0
 157,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/71/1,0,0,0,0,0,0,0,0,0,0
-158,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6001/1,0,0,0,0,1,0,0,0,0,0
-159,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6002/1,0,0,0,0,1,0,0,0,0,0
-160,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6003/1,0,0,0,0,1,0,0,0,0,0
-161,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1,0,0,0,0,1,0,0,0,0,0
+158,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6001/1,0,0,0,0,1,0,0,0,0,1
+159,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6002/1,0,0,0,0,1,0,0,0,0,1
+160,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6003/1,0,0,0,0,1,0,0,0,0,1
+161,https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1,0,0,0,0,1,0,0,0,0,1
 162,https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/1/11,0,0,0,0,0,0,0,0,0,0
 163,https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/2/11,0,0,0,0,0,0,0,0,0,0
 164,https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/3/10,0,0,0,0,0,0,0,0,0,0
@@ -577,7 +577,7 @@ Item No.,id,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10
 576,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/183/18,0,0,0,0,0,0,0,0,0,0
 577,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/186/18,0,0,0,0,0,0,0,0,0,0
 578,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/187/19,0,0,0,0,0,0,0,0,0,0
-579,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/190/20,0,1,0,0,0,0,0,0,0,0
+579,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/190/20,0,1,0,0,0,1,0,0,0,0
 580,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/191/21,0,0,0,0,0,0,0,0,0,0
 581,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/192/20,0,0,1,0,0,0,0,0,0,0
 582,https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/193/18,0,0,0,0,0,0,0,0,0,0
