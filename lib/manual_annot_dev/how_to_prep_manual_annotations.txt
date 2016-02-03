@@ -1,34 +1,45 @@
 Assemble spreadhseet for holding manual annotations
 
-Goal is to annotate all attributes, all datasets in corpus E.
+Goal is to annotate all attributes, all datasets in corpus F.
 Total in "annotator_spreadsheet_template.txt" is 17589, which is too many to do all in one pass, so set 
 priorities.
 
-Priority 1: datasets matching test queries + carbon cyclying datasets that do not match any query.
-Priority 2: attributes that have classes available in ECSO
-Priority 3: TBD
-some attributes are not likely to be annotated
+Notes (jan 19): 
+annotator_spreasheet has only EML described datasets. not sure what fraction of the total this is.
+some attributes are likely to be never annotated. Not yet established what the criteria are.
+
+
+Triage: 
+Priority 1: datasets matching test queries, plus carbon cyclying datasets that do not match any query. 
+  Anticipating that these dataset will have classes in ECSO, so can be annotated quickly. (in practice, was divided into 2 parts, 1 and 1a)
+  
+Priority 2: other datasets with attributes that have classes available in ECSO. 
+Probably these will match high level classes, or classes will need to be added, since ECSO has very few classes for non-carbon cyling measurements.
+
+Priority 3: all other datasets
 
 
 
-overall:
-select datassets from the corpus E ground truth spreadsheet. match selected datasets with the template having all corpus E attributes to the priority datasets.
+
+
+overall process:
+select datassets from the corpus E ground truth spreadsheet. match selected datasets with the template containing all corpus E attributes.
 
 Prep:
-1. select datasets for current grouping (priority) in google spreadsheet
+	1. select datasets for current grouping (priority) in google spreadsheet
 
 Assemble input files:
 A. the annotation template with all attributes listed
-2. have a copy of ben's template (annotator_spreadsheet_template.txt)
-3.add empty column to front of each row of template (so you can match on col2)
+	2. have a copy of ben's template (annotator_spreadsheet_template.txt)
+	3.add empty column to front of each row of template (easier to match same cols, so match on col2)
 
 <code> 
  sed 's/^/NA\t/' annotator_spreadsheet_template.txt > annotator_spreadsheet_template_for_awkmatch.txt 
 </code>
 
 selected datasets, with priority
-4. export spreadsheet as TAB sep
-5. cut to usable size for merge, filter rows with current priority
+	4. export spreadsheet from google as TAB sep
+	5. cut to usable size for merge, filter rows with current priority
 adjust the grep pipe for other priorities, eg a '2' at the end of the line indicates priority 2. create other lists for later groups of datasets
 
 <code>
@@ -80,3 +91,159 @@ annotations (step 8, stored in the dev dir till done.)
 	annotations_man_priority1.tsv
 	
 	
+	
+	
+-------------
+2016-01-19 
+some of the priority 1 datasets did not make it into the first pass.
+re-export the google ground truth, and use a diff to see which were missing. mark these as 1b, re-export as above.
+
+
+ 1056  mv 'ground_truth_test_corpus_E - FINAL (1).tsv' 'ground_truth_test_corpus_E_FINAL_20160119.tsv'
+ 1057  cut  -f1-13 ground_truth_test_corpus_E_FINAL_20160119.tsv  | grep 1$ | cut -f 1,2 > node_id_priority1_forchecking.tsv
+ 1058  tail node_id_priority1_forchecking.tsv 
+ 1059  tail node_id_priority1.tsv 
+ 1060  diff node_id_priority1.tsv node_id_priority1_forchecking.tsv 
+ 
+ manual editing: cp-paste from diff, make sure dilimeter is tab 
+ 1063  vim node_id_priority1a.tsv
+
+
+ Match:
+<code>
+ awk 'NR==FNR { h[$2] = $1 ; next} {print h[$2],$0}' node_id_priority1a.tsv annotator_spreadsheet_template_for_awkmatch.txt |  grep -v '^ NA' > matched_template_priority1a.tsv 
+</code>
+
+
+Insert these lines into annotation spreadsheet, and finish annotating.
+
+2016-01-20
+export, trim these new lines for Ben, as in step 8 above.
+
+[mob@adelie manual_annot_dev]$ sed '2,3243 d' spreadsheet_export_20160120_w_1a.tsv |sed 's/ NA//' | cut -f1,2,3,4,6  > annotations_man_priority1a.tsv
+
+This was in step 8 command line. what was this for? 
+| sed 's/36$//'
+------
+Also noticed that there were no mstmips in Ben's template. aha. are these not in cn?
+None of the mstimps match the test queries (they are all global in scope, no query is global in scope; mstmip was for prov, lter for discovery, so queries go better with lter.)
+but mstmip could be among the irrelevant_retrieved.
+If you want to annotate them, need code to get their attributes. number/dataset seems to vary, even within a single time 
+eg, https://cn-sandbox-2.test.dataone.org/cn/v2/query/solr/?q=TotLivBiom
+
+Resolution: per Ben: only EML datasets are being annotated (this applies to manual annotations, too - I had supposed it applied only to auto-annotations).
+
+---------------
+2016 Jan 23. adding the remaining EML datsets to the annotation spreadsheet
+tagged everything left as priority 2, Ben's template will only match to the EML packages.
+
+Command lines:
+<code>
+cut  -f1-13 ground_truth_test_corpus_E_FINAL_20160123.tsv | grep 2$ | cut -f 1,2 > node_id_priority2.tsv
+</code>
+
+<code>
+awk 'NR==FNR { h[$2] = $1 ; next} {print h[$2],$0}' node_id_priority2.tsv annotator_spreadsheet_template_for_awkmatch.txt |  grep -v '^ NA' > matched_template_priority2.tsv
+</code>
+
+
+
+-----------------------
+2016-02-01
+protocol for filling out this spreadsheet:
+
+Spreadsheet: annotations_manual_all
+https://docs.google.com/spreadsheets/d/1Gsl3Ioyv-ldxomxOwhShdcP4VDkVnnjV3nNrJQJ3txE/edit#gid=1265587861
+
+Goal: each dataset's important attributes have either
+A. an entity and characteristic (one of each)
+or
+B. an existing ECSO measurementType assigned to it.
+
+which can be used in class descriptions:
+New auto-generated classes will be created for ECSO by combining entities and characteristics (Ben)
+existing ECSO MeasurementType subclasses will be modeled in ECSO manually with their entity and characteristic (Margaret, Mark)
+
+
+
+Spreadsheet columns:
+A-D: [attribute identifiers]
+F: class_id_int
+G: Entity [a label],
+H: Characteristic [a label],
+I: ecso_measType [optional, label for col F],
+J: create_entity [boolean],
+K: create_char [boolean]
+
+
+
+Process:
+A. entering entities and characteristics:
+
+A.1 existing entities
+"existing" means entity already is in ECSO. they will have namespaces of either 'ecso:' or 'envo:'
+examine ECSO in protege or biportal to find existing entities.
+add the label with the namespace to the Entity column
+For this proof of concept, measurements that are best described with more than one entity (e.g,, an entity in the numerator and also in the denominator), put in only the numerator entity.
+
+A.2 existing characteristics
+have namespaces either 'oboe:' or 'pato:'
+examine OBOE from within ECSO in protoge. examine PATO in ontobee (soon, ECSO will import PATO)
+
+
+A.3 New entities and characteristics
+Some necessary classes are not yet in the above ontologies.
+Enter them in the appropriate column (Entity or Characteristic), with the best-fit namespace.
+Keep in mind that we control the 'ecso:' and 'oboe:' namesapces, but not 'pato:' or 'envo:' (although we can suggest additions)
+
+*** IMPORTANT: mark the flag column stating this entity or characteristic needs to be created (ie, reviewed and entered) ***
+J: create_entity [boolean],
+K: create_char [boolean]
+
+
+
+B: assign an existing ECSO measurementType
+If an adequate ECSO measurmentType already exists, use it. add the class_id_int.
+Optional: add the label to the  col "proposed MeasurementType" so others can read it.
+find existing ECSO measurmentType  subclasses with protege 
+
+
+
+-----------------------
+2016-02-02
+examine progress, export for summary analysis:
+
+process
+1. export from google-sheet as a tab-sep
+  annotations_manual_all_20160202.tsv
+
+2. cut down:
+2.1 get a list of ids (you could use the test corp F list for this)
+<code>
+    cat annotations_manual_all_20160202.tsv | sed 1,2d| cut -f2  |uniq> pkg_ids_annot.txt
+</code>
+
+2.2 get the cols just with id, entity, characteristic (rows will end with a word, other rows end with \t):
+<code>
+   cat annotations_manual_all_20160202.tsv | sed 1,2d| cut -f2,7,8 | grep '\w$' > id_entity_char.txt
+</code>
+
+3. count up atts and presence of ent-char:
+3.1 for each id, count the number of row (with atts):
+<code>
+   for id in `cat pkg_ids_annot.txt` ; do echo -n $id; echo -n ','; grep -c $id annotations_manual_all_20160202.tsv; done > pkgid_attcount.csv
+</code>
+
+3.2 for each id, count the number of rows (with entity or char):
+<code>
+   for id in `cat pkg_ids_annot.txt` ; do echo -n $id; echo -n ','; grep -c $id id_entity_char.txt; done > pkgid_entchar.csv
+</code>
+
+4. paste these two files together, keep both ids in case they get botched (note - isnt there a join?)
+<code>
+   paste -d',' pkgid_attcount.csv pkgid_entchar.csv  > pkgid_attcount_pkgid_entcarcount.csv
+</code>
+
+5. upload to google-sheet and look at fractions, mean fraction, etc.
+
+ 
