@@ -26,7 +26,6 @@ ark:/90135/q1cf9n23/1/mrt-eml.xml
 ark:/90135/q1cj8bfz/1/mrt-eml.xml
 ark:/90135/q1cr5r92/1/mrt-eml.xml
 ark:/90135/q1db7zsr/1/mrt-eml.xml
-ark:/90135/q1dv1gt9/1/mrt-eml.xml
 ark:/90135/q1dv1gt9/2/mrt-eml.xml
 ark:/90135/q1f769jn/2/mrt-eml.xml
 ark:/90135/q1gb221v/1/mrt-eml.xml
@@ -362,14 +361,11 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/2726/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3137/7
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10137/3
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10150/5
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10151/4
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10196/3
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10207/4
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10299/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/10514/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/1316/4
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/1602/8
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-arc/1649/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/122/18
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/123/18
@@ -714,7 +710,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/5013/6
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/5023/1
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/5
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/6
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/55/2
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/57/5
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/58/7
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6001/1
