@@ -41,6 +41,15 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
   filtered_merged_result[is.na(filtered_merged_result)] <- 0
   
   
+  # save copy of filtered_merged_result for external examination
+  # ----
+  # if you want to save a version from each run, make this filename unique by adding a date. for now it is a temp file.
+  # this syntax copied from lines 89-92 in Query_Function.R. separator seems to default to single space.
+  outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/'
+  write.csv(filtered_merged_result, paste(outputFilePath, 'filtered_merged_result_temp', ".csv", sep = ''), row.names=F)
+  
+  # ----
+  
   querycolumns <- c("q1","q2","q3","q4","q5","q6","q7","q8","q9","q10")
   
   #This variable will need to be adjusted as we finalize the definition of the values for SOLR_Index_Type
@@ -129,6 +138,7 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     
       if(length(totalRelevantRecords) == 0) {
         #print("There are no relevant dataset for this query from the ground truth")
+        # mob: left these messages in; they should not occur. if no relevant datasets found in ground_truth, something is wrong with that file.
         Recall <- "No Relevant Datasets in the Ground Truth"
         Precision <- "No Relevant Datasets in the Ground Truth"
         test_corpus_id <- gtFileLocation
@@ -136,7 +146,10 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
         ontology_set_id <- "N/A"
       } else if ((Relevant_Retrieved_Counter == 0) && (IRRelevant_Retrieved_Counter == 0)) {
         Recall <- (Relevant_Retrieved_Counter / totalRelevantRecords)*100
-        Precision <- "Number of Relevant Datasets Retrieved = 0 and Number of Irrelevant Datasets Retrieved = 0"
+        # Precision <- "Number of Relevant Datasets Retrieved = 0 and Number of Irrelevant Datasets Retrieved = 0"
+        # mob: total retrieved = 0, and Precision divides by total_retrieved. div by zero is mathematically infinite.
+        # Use NaN as a place holder for values that cannot be represented in floating pt.
+        Precision <- "NaN"
         test_corpus_id <- gtFileLocation
         run_id <- "N/A"
         ontology_set_id <- "N/A"
