@@ -1,0 +1,9 @@
+q1,manual_annot,sem_annotation:"http://purl.dataone.org/odo/ECSO_00000533",None
+q7,manual_annot,sem_annotation:"http://purl.dataone.org/odo/ECSO_00000537",None
+q10,nat_lang,ocean carbon dioxide flux in dimensions of (amount or mass) of carbon per (area or volume) per time,None
+q10,metacat_ui,ocean carbon dioxide flux,None
+q10,metacat_filtered,ocean AND attribute:"carbon dioxide flux",None
+q10,full_text,(attribute:"C02 flux" or attribute:"carbon dioxide flux") AND (abstract:ocean OR title:ocean),None
+q10,bioportal_annot,sem_annotation_bioportal_sm:"http://purl.dataone.org/odo/ECSO_00000543",None
+q10,esor_annot,sem_annotation_esor_sm:"http://purl.dataone.org/odo/ECSO_00000543",None
+q10,manual_annot,sem_annotation:"http://purl.dataone.org/odo/ECSO_00000543",None
