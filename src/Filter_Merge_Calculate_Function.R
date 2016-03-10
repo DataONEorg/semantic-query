@@ -68,10 +68,22 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation){
     ##
     #n <- "q2"
    
-    #Count the total number of Relevant dataset for a specific query from the ground truth
-    queryOfInterest <- which( colnames(filtered_merged_result) == n )
-    counter <- table(filtered_merged_result[queryOfInterest])
-    totalRelevantRecords <- counter[names(counter)==1]
+    
+  # from bryce  
+	  # First, get just the unique comnbinations of Dataset_ID and the value in 
+    # column 'n' (e.g. q1, q2, etc) so we don't count 
+     unique_query_result <- unique(filtered_merged_result[,c("Dataset_ID", n)])
+     counter <- table(unique_query_result[,n])
+     totalRelevantRecords <- counter[names(counter) == 1]
+ # end from bryce   
+    
+    
+  # orig  
+  #  #Count the total number of Relevant dataset for a specific query from the ground truth
+  #  queryOfInterest <- which( colnames(filtered_merged_result) == n )
+  #  counter <- table(filtered_merged_result[queryOfInterest])
+  #  totalRelevantRecords <- counter[names(counter)==1]
+  # end orig   
 
     for (j in solrtypecolumns) {
       
