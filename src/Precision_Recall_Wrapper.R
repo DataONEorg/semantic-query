@@ -7,22 +7,34 @@
 
 # Parameters need to be provided by the user to the wrapper:
 # 1) queryFragFullFilePath = the full directory path where the query fragment file can be found.
-# --> Ex: '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv'
+# --> Ex: '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all.csv'
 
 # 2) gtFileLocation = the full directory path where the ground truth file can be found.
-# --> Ex: '~/dataone/gitcheckout/semantic-query/lib/ground_truth/ground_truth_test.csv'
+# --> Ex: '~/dataone/gitcheckout/semantic-query/lib/ground_truth/test_corpus_f_groundtruth_carbon_flux_queries.csv'
 
+# 3) homePath = the home path where the semantic-query repository is set up.
+# --> Ex: '~/dataone/gitcheckout/'
 
-precicison_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation){
+precicison_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation, homePath){
   
-  source('~/dataone/gitcheckout/semantic-query/src/Query_Function.R')
-  source('~/dataone/gitcheckout/semantic-query/src/Filter_Merge_Calculate_Function.R')
-
-  outputFileLocation <- query_function(queryFragFullFilePath)
+  ## This example needs to be commented out during the full automatic test ##
+  #homePath <- '~/dataone/gitcheckout/'
   
-  filter_merge_calculate_function(gtFileLocation, outputFileLocation)
+  queryFunctionLocation <- paste0(homePath, "semantic-query/src/Query_Function.R")
+  calculateFunctionLocation <- paste0(homePath, "semantic-query/src/Filter_Merge_Calculate_Function.R")
   
-  print("The precision and recall calculations can be found in the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'")
+  #print(queryFunctionLocation)
+  #print(calculateFunctionLocation)
+  
+  source(queryFunctionLocation)
+  source(calculateFunctionLocation)
+  
+  outputFileLocation <- query_function(queryFragFullFilePath, homePath)
+  
+  finaloutputFileLocation <- filter_merge_calculate_function(gtFileLocation, outputFileLocation, homePath)
+  
+  print("The precision and recall calculations can be found in the following file:")
+  print(finaloutputFileLocation)
   
   return()
   
