@@ -1,7 +1,7 @@
 # Purpose: The script will perform the following:
 # 1) Read in a pre-deteremined group of query fragements from a .csv file with the following characteristics:
-#     -- File name: "uc52_queries_all.csv".
-#     -- File Path: Provided by the user as 1 of the 2 input parameters to this function.
+#     -- File name: Example - "uc52_queries_all.csv".
+#     -- File Path: Provided by the user as 1 of the 3 input parameters to this function.
 #     -- File Structure: The first row is the header and the order of the header is as follows:
 #       -- Query_ID, SOLR_Index_Type, Query_Frag, Ontology_Set_ID
 #
@@ -9,9 +9,9 @@
 # 3) Accumulate the results in a data frame, and write the results to an output file.
 
 # Note:
-# 1) The output of function is set up to be written to the following directory: '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
+# 1) The output of function is set up to be written to the following directory: '/semantic-query/results/Resultset_Summary'
 
-query_function <- function(queryFragFullFilePath){
+query_function <- function(queryFragFullFilePath, homePath){
   
   library(dataone)
   
@@ -29,12 +29,12 @@ query_function <- function(queryFragFullFilePath){
   # 3) Directory location for the query fragment file:
   # Example: 
   ## This example needs to be commented out during the full automatic test ##
-  #queryFragFullFilePath <- '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all_test.csv'
+  #queryFragFullFilePath <- '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all.csv'
   
   
   queryFragmentFileDirectory <- queryFragFullFilePath
   #print(queryFragmentFileDirectory)
-
+  
   # 4) Defining the entry for "Run_Group"
   runGroup <- Sys.time()
   #print(runGroup)
@@ -50,7 +50,7 @@ query_function <- function(queryFragFullFilePath){
   #For each query fragment in the CSV file, submit the query fragment to SOLR and record up to 1000 returned results as a data frame
   
   for (n in 1:nrow(queryFragment)) {
-  
+    
     #n <- 2
     
     queryid <- queryFragment[n,1]
@@ -85,12 +85,14 @@ query_function <- function(queryFragFullFilePath){
   #Change the first column header from "id" to "Dataset_ID"
   names(df)[1] <- "Dataset_ID"
   
-  outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
+  #outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
+  outputFilePath <- paste0(homePath, "semantic-query/results/Resultset_Summary") 
   
   # Write out the results as a CSV file using a filename linked to the runGroup
   write.csv(df, paste(outputFilePath, runGroup, ".csv", sep = '_'), row.names=F)
+  outputFileLocation <- paste(outputFilePath, runGroup, ".csv", sep = '_')
   
-  outputFileLocation = paste(outputFilePath, runGroup, ".csv", sep = '_')
+  print("The query results can be found in the following file:")
   print(outputFileLocation)
   
   return(outputFileLocation)
