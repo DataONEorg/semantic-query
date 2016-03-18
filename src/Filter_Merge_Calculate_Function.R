@@ -212,7 +212,15 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation, 
   
   # Write out the results as a Tab Delimited Text File file, so append could be used
   #write.table(test2, "~/Prec_Recall_Results.txt", append = T, sep = " ", row.names=F)
-  write.table(test2, finalOutput, append = T, sep = " ", row.names=F)
+  #write.table(test2, finalOutput, append = T, sep = " ", row.names=F)
+  
+  if (file.exists(finalOutput)) {
+    #print("file exists")
+    write.table(test2, finalOutput, append = T, sep = " ", row.names=F, col.names = F)
+  } else {
+    #print("file does not exist")
+    write.table(test2, finalOutput, append = T, sep = " ", row.names=F)
+  }
   
   finaloutputFileLocation <- finalOutput
   
