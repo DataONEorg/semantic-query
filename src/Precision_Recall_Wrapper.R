@@ -15,7 +15,7 @@
 # 3) homePath = the home path where the semantic-query repository is set up.
 # --> Ex: '~/dataone/gitcheckout/'
 
-precicison_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation, homePath){
+precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation, homePath){
   
   ## This example needs to be commented out during the full automatic test ##
   #homePath <- '~/dataone/gitcheckout/'
