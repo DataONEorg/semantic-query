@@ -13,20 +13,20 @@ plot_pr <- function() {
     # Precision plot
     p <- ggplot(pr, aes(SOLR_Index_Type2, Precision)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
-        stat_summary(fun.data = mean_se, geom = "errorbar", width=0.5) + 
+        stat_summary(fun.data = mean_se, geom = "errorbar", width=0.4) + 
         geom_jitter(color="red", height=0, width=0.9) +
-        labs(x="Search Type",y="Precision") +
-        theme(axis.title = element_text(face="bold", size=22)) +
-        theme(axis.text = element_text(face="bold", size=18))
+        labs(x="Search Type",y="Precision (%)") +
+        theme(axis.title = element_text(face="bold", size=28)) +
+        theme(axis.text = element_text(face="bold", size=24))
     ggsave("pr-plot-precision.pdf", plot=p, width=12, height=12)
     
     # Recall plot
     r <- ggplot(pr, aes(SOLR_Index_Type2, Recall)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
-        stat_summary(fun.data = mean_se, geom = "errorbar", width=0.5) +
+        stat_summary(fun.data = mean_se, geom = "errorbar", width=0.4) +
         geom_jitter(color="red", height=0, width=0.9) +
-        labs(x="Search Type",y="Recall") +
-        theme(axis.title = element_text(face="bold", size=22)) +
-        theme(axis.text = element_text(face="bold", size=18))
+        labs(x="Search Type",y="Recall (%)") +
+        theme(axis.title = element_text(face="bold", size=28)) +
+        theme(axis.text = element_text(face="bold", size=24))
     ggsave("pr-plot-recall.pdf", plot=r, width=12, height=12)
 }
