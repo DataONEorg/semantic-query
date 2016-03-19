@@ -2,20 +2,31 @@ library(ggplot2)
 library(Hmisc)
 
 plot_pr <- function() {
-    pr <- read.csv("results/Prec_Recall_Results.txt", sep = " ")
+    pr <- read.csv("results/Prec_Recall_Results_20160309.txt", sep = " ")
     pr$Precision[is.na(pr$Precision)] <- 0
+    # Use a factor to set the order of search types to be plotted
+    pr$SOLR_Index_Type2 <- factor(pr$SOLR_Index_Type, levels=c("full_text", "metacat_ui", "bioportal_annot", "esor_annot", "manual_annot"), 
+                                  labels=c("Full Text", "Structured", "BioPortal", "ESOR", "Manual"))
+    # Eliminate search types not set in the above factor
+    pr <- pr[which(!is.na(pr$SOLR_Index_Type2)), ]
     
-    # Precision
-    p <- ggplot(pr, aes(SOLR_Index_Type, Precision)) + 
+    # Precision plot
+    p <- ggplot(pr, aes(SOLR_Index_Type2, Precision)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
         stat_summary(fun.data = mean_se, geom = "errorbar", width=0.5) + 
-        geom_jitter(color="red", height=0, width=0.9)
+        geom_jitter(color="red", height=0, width=0.9) +
+        labs(x="Search Type",y="Precision") +
+        theme(axis.title = element_text(face="bold", size=22)) +
+        theme(axis.text = element_text(face="bold", size=18))
     ggsave("pr-plot-precision.pdf", plot=p, width=12, height=12)
     
-    # Recall
-    r <- ggplot(pr, aes(SOLR_Index_Type, Recall)) + 
+    # Recall plot
+    r <- ggplot(pr, aes(SOLR_Index_Type2, Recall)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
         stat_summary(fun.data = mean_se, geom = "errorbar", width=0.5) +
-        geom_jitter(color="red", height=0, width=0.9)
+        geom_jitter(color="red", height=0, width=0.9) +
+        labs(x="Search Type",y="Recall") +
+        theme(axis.title = element_text(face="bold", size=22)) +
+        theme(axis.text = element_text(face="bold", size=18))
     ggsave("pr-plot-recall.pdf", plot=r, width=12, height=12)
 }
