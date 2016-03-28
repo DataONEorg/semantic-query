@@ -1,8 +1,8 @@
 library(ggplot2)
 library(Hmisc)
 
-plot_pr <- function() {
-    pr <- read.csv("results/Prec_Recall_Results_20160309.txt", sep = " ")
+plot_pr <- function(results_Prec_Recall) {
+    pr <- read.csv(results_Prec_Recall, sep = " ")
     pr$Precision[is.na(pr$Precision)] <- 0
     # Use a factor to set the order of search types to be plotted
     pr$SOLR_Index_Type2 <- factor(pr$SOLR_Index_Type, levels=c("full_text", "metacat_ui", "bioportal_annot", "esor_annot", "manual_annot"), 
