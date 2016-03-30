@@ -14,7 +14,8 @@ plot_pr <- function(results_Prec_Recall) {
     p <- ggplot(pr, aes(SOLR_Index_Type2, Precision)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
         stat_summary(fun.data = mean_se, geom = "errorbar", width=0.4) + 
-        geom_jitter(color="red", height=0, width=0.6, size=3) +
+        #geom_jitter(color="red", height=0, width=0.6, size=3) +
+        scale_y_continuous(limits = c(0, 100)) +
         labs(x="Search Type",y="Precision (%)") +
         theme(axis.title = element_text(face="bold", size=28)) +
         theme(axis.text = element_text(face="bold", size=24))
@@ -24,7 +25,8 @@ plot_pr <- function(results_Prec_Recall) {
     r <- ggplot(pr, aes(SOLR_Index_Type2, Recall)) + 
         stat_summary(fun.y = mean, geom = "bar", color="black", fill="white") + 
         stat_summary(fun.data = mean_se, geom = "errorbar", width=0.4) +
-        geom_jitter(color="red", height=0, width=0.6, size=3) +
+        #geom_jitter(color="red", height=0, width=0.6, size=3) +
+        scale_y_continuous(limits = c(0, 100)) +
         labs(x="Search Type",y="Recall (%)") +
         theme(axis.title = element_text(face="bold", size=28)) +
         theme(axis.text = element_text(face="bold", size=24))
