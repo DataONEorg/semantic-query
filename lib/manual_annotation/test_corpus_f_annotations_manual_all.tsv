@@ -1755,7 +1755,7 @@ urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	1	6	mob		ecso:treatment_protocol	oboe-characteristics:Name		1		treatment treatment treatment	519	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	1	7	mob		ecso:sampling_site	oboe-characteristics:Identifier		1		plot plot plot identifier	519	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	1	8	mob		ecso:sampling_site	oboe-characteristics:Identifier		1		subplot subplot subplot identifier	519	
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	1	9	mob		ecso:salt_marsh_grass	oboe-characteristic:ArealMassDensity		1		biomass biomass biomass dry weight gramPerMeterSquared		
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/120/8	1	9	mob		ecso:salt_marsh_grass	oboe-characteristics:ArealMassDensity		1		biomass biomass biomass dry weight gramPerMeterSquared		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	1	mob		envo:lake	oboe-characteristics:Name				lakeid lake name abbreviation lake name abbreviation	519	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	2	mob							year4 year year nominalYear		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11	1	3	mob							sample_date sample date sample date		
@@ -2004,7 +2004,7 @@ urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	2
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	1	mob							plot  plot/treatment		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	2	mob							year  year	519	
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	3	mob		ecso:samples_litter_basket	oboe-characteristics:Count		1		nbasket  number of litter baskets averaged into annual mean. Nine baskets are located in each plot but sometimes baskets are tipped. number	519	
-urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	4	mob		envo:litter	oboe-characteristic:ArealMassDensity		1		avg/m2  mean litterfall gramsPerSquareMeter		
+urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	4	mob		envo:litter	oboe-characteristics:ArealMassDensity		1		avg/m2  mean litterfall gramsPerSquareMeter		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	3	5	mob							sdg/m2  standard deviation litterfall gramsPerSquareMeter		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	4	1	mob							plot  plot/treatment		
 urn:node:LTER	https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/8/18	4	2	mob							subplot  subplot	519	
@@ -20379,7 +20379,7 @@ urn:node:GOA	doi:10.5063/F19G5JRF	1	21								Latitude  Approximate latitude at 
 urn:node:GOA	doi:10.5063/F19G5JRF	1	22								Longitude  Approximate longitude at the location the sample was collected (decimal degrees, WGS-84) degree		
 urn:node:GOA	doi:10.5063/F19G5JRF	1	23								Species  Latin name (Genus species)  of the fish sampled (e.g., Clupea pallasii) 		
 urn:node:GOA	doi:10.5063/F19G5JRF	1	24								CollectorName  Name of the person responsible for collecting that particular sample		
-urn:node:GOA	doi:10.5063/F19G5JRF	1	25			ecso:tissue	oboe-characteristic:Name				Tissue1  Type of tissue collected (e.g., heart for fatty acid analysis) 		
+urn:node:GOA	doi:10.5063/F19G5JRF	1	25			ecso:tissue	oboe-characteristics:Name				Tissue1  Type of tissue collected (e.g., heart for fatty acid analysis) 		
 urn:node:GOA	doi:10.5063/F19G5JRF	1	26								Tissue2  Type of tissue collected (e.g., otolith for elemental analysis) 		
 urn:node:GOA	doi:10.5063/F19G5JRF	1	27								Tissue3  Type of tissue collected (e.g., caudal fin for genetic analysis) 		
 urn:node:GOA	doi:10.5063/F19G5JRF	1	28			ecso:heart_tissue	ecso:boolean				Heart  The number 1 signifies that the heart from that particular fish (SIN) was randomly selected for processing to determine fatty acid composition; a blank cell denotes the heart was not processed.		
