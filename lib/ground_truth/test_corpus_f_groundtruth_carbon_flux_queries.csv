@@ -742,7 +742,7 @@ judithk.109950.1,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.109957.2,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.1122.3,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.1188.8,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
-judithk.1256.3,0,0,0,0,0,0,0,1,0,0,eml://ecoinformatics.org/eml-2.1.0
+judithk.1256.3,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.1264.2,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.1274.2,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 judithk.1280.1,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
@@ -772,8 +772,8 @@ knb-lter-pie.61.5,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 knb-lter-sgs.161.12,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 knb-lter-sgs.163.12,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
 knb.1.3,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
-kuolin.81.4,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.0.1
-kuolin.81.5,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
+kuolin.81.4,0,0,0,0,0,0,0,1,0,0,eml://ecoinformatics.org/eml-2.0.1
+kuolin.81.5,0,0,0,0,0,0,0,1,0,0,eml://ecoinformatics.org/eml-2.1.0
 ljc.47.3,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.0.1
 ljc.63.15,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.0.1
 lshwang.26.1,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.0.1
@@ -909,7 +909,7 @@ www.supersites.net.au/knb/metacat/supersite.297.4/html,0,0,0,0,0,0,0,0,0,0,eml:/
 www.supersites.net.au/knb/metacat/supersite.348.2/html,0,0,1,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
 www.supersites.net.au/knb/metacat/supersite.355.2/html,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
 www.supersites.net.au/knb/metacat/supersite.357.2/html,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
-www.supersites.net.au/knb/metacat/supersite.359.4/html,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
+www.supersites.net.au/knb/metacat/supersite.359.4/html,0,0,0,0,0,0,0,1,0,0,eml://ecoinformatics.org/eml-2.1.1
 www.supersites.net.au/knb/metacat/supersite.377.4/html,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
 www.supersites.net.au/knb/metacat/supersite.379.2/html,0,0,0,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.1
 www.supersites.net.au/knb/metacat/supersite.4.3/html,0,0,1,0,0,0,0,0,0,0,eml://ecoinformatics.org/eml-2.1.0
