@@ -2,6 +2,15 @@
 Python script to set or update a field in the CN solr index.
 
 Update the variables in the main section of the script below.
+
+For reference, the update operation is functionally equivalent to the following using curl and jq, except with paging::
+
+  SRC_URL="https://raw.githubusercontent.com/DataONEorg/semantic-query/master/lib/test_corpus_F_id_list.txt"
+  DST_URL="http://localhost:8983/solr/search_core_shard1_replica1/update?wt=json&commit=true"
+  curl ${SRC_URL} | \
+  jq -R '{"id":.,"set":{"test_corpus_sm":["F"]}}' | \
+  curl -X POST -H "Content-Type: application/json" -d @- ${DST_URL}
+  
 '''
 
 import logging
