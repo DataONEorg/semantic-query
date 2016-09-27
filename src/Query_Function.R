@@ -40,7 +40,7 @@ query_function <- function(queryFragFullFilePath, homePath){
   #print(runGroup)
   
   #Read in the query fragments from the input CSV file
-  queryFragment <- read.csv(queryFragmentFileDirectory, header = T, sep = ",", quote="", stringsAsFactors = F)
+  queryFragment <- read.delim(queryFragmentFileDirectory, stringsAsFactors = F)
   #print(queryFragment)
   
   # Initialize an output data frame with the proper columns
