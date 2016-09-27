@@ -65,7 +65,26 @@ query_function <- function(queryFragFullFilePath, homePath){
     #str(queryParamList)
     
     # Execute the query, and add in the classification columns
-    result <- query(cn, queryParamList, as = "data.frame", parse = TRUE)
+    query_all_pages <- function(cn, params) {
+        if (!("rows" %in% params)) params[["rows"]] <- "1000"
+        if (!("fl" %in% params)) params[["fl"]] <- "id"
+        params[["start"]] <- "0"
+        
+        # print(params)
+        result <- query(cn, params, as = "data.frame", parse = TRUE)
+        all_pages <- result
+        
+        while(nrow(result) >= 1000) {
+            params[["start"]] <- as.character(as.numeric(params[["start"]]) + as.numeric(params[["rows"]]))
+            # print(params)
+            result <- query(cn, params, as = "data.frame", parse = TRUE)
+            all_pages <- rbind(all_pages, result)
+        }
+        
+        all_pages
+    }
+    
+    result <- query_all_pages(cn, queryParamList)
     #str(result)
     
     if (!is.null(result) & length(result) > 0) {
