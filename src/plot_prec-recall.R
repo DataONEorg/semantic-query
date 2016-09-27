@@ -4,6 +4,8 @@ library(Hmisc)
 plot_pr <- function(results_Prec_Recall) {
     pr <- read.csv(results_Prec_Recall, sep = " ")
     pr$Precision[is.na(pr$Precision)] <- 0
+    pr$Precision <- as.numeric(pr$Precision)
+    pr$Recall <- as.numeric(pr$Recall)
     # Use a factor to set the order of search types to be plotted
     pr$SOLR_Index_Type2 <- factor(pr$SOLR_Index_Type, levels=c("full_text", "metacat_ui", "bioportal_annot", "esor_annot", "manual_annot", "esor_cosine"), 
                                   labels=c("Full Text", "Structured", "BioPortal", "ESOR", "Manual", "ESOR Cosine"))
