@@ -11,6 +11,22 @@ For reference, the update operation is functionally equivalent to the following 
   jq -R '{"id":.,"set":{"test_corpus_sm":["F"]}}' | \
   curl -X POST -H "Content-Type: application/json" -d @- ${DST_URL}
   
+To run this script:
+
+A. setup dependencies
+
+$ pip install -U --user requests
+$ pip install -U --user cachecontrol
+
+B. create an ssh tunnel to cn-sandbox-2
+
+$ ssh -L8983:localhost:8983 cn-sandbox-2.test.dataone.org
+
+C. Run the script
+Note: Edit any settings in the main section towards the end of the script
+
+$ python set_corpus_id.py
+
 '''
 
 import logging
@@ -245,7 +261,7 @@ def getPIDList(url, max=None):
   #return the list upto max entries, removing any empty strings
   return filter(None, pid_list[0:max])
 
-
+# == MAIN ==
 if __name__ == "__main__":
   logging.basicConfig(level=logging.INFO)
   logging.getLogger('requests').setLevel(logging.CRITICAL)
