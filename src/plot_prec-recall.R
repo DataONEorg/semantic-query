@@ -25,6 +25,7 @@ plot_pr <- function(results_Prec_Recall) {
         theme(axis.title = element_text(face="bold", size=28)) +
         theme(axis.text = element_text(face="bold", size=18))
     ggsave("pr-plot-precision.pdf", plot=p, width=12, height=12)
+    ggsave("pr-plot-precision.png", plot=p, width=12, height=12)
     
     # Recall plot
     r <- ggplot(pr, aes(SOLR_Index_Type2, Recall)) + 
@@ -36,4 +37,5 @@ plot_pr <- function(results_Prec_Recall) {
         theme(axis.title = element_text(face="bold", size=28)) +
         theme(axis.text = element_text(face="bold", size=18))
     ggsave("pr-plot-recall.pdf", plot=r, width=12, height=12)
+    ggsave("pr-plot-recall.png", plot=r, width=12, height=12)
 }
