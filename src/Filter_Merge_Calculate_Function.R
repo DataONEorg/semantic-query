@@ -12,7 +12,7 @@
 # 2) Definition of Precision: A/(A+C), where A = # of relevant retrieved and C = # of irrelevant records retrieved
 
 # Note:
-# 1) The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.txt'
+# 1) The output of function is set up to be written and append to the following file: '~/dataone/gitcheckout/semantic-query/results/Prec_Recall_Results.csv'
 
 filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation, homePath){
   
@@ -226,4 +226,6 @@ filter_merge_calculate_function <- function(gtFileLocation, outputFileLocation, 
   
   return(finaloutputFileLocation)
   
+    finaloutputFileLocation <- "results/Prec_Recall_Results.csv"
+    write.csv(RP_Result, finaloutputFileLocation, row.names = F)
 }
