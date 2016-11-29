@@ -119,8 +119,8 @@ query_function <- function(queryFragFullFilePath){
   outputFilePath <- "results/Resultset_Summary"
   
   # Write out the results as a CSV file using a filename linked to the runGroup
-  write.csv(df, paste(outputFilePath, runGroup, ".csv", sep = '_'), row.names=F)
   outputFileLocation <- paste(outputFilePath, runGroup, ".csv", sep = '_')
+  write.csv(results, outputFileLocation, row.names = FALSE)
   
   print("The query results can be found in the following file:")
   print(outputFileLocation)

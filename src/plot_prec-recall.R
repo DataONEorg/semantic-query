@@ -1,8 +1,9 @@
 
 plot_pr <- function(results_Prec_Recall) {
-    pr <- read.csv(results_Prec_Recall, sep = " ")
     library(ggplot2)
     library(Hmisc)
+    
+    pr <- read.csv(results_Prec_Recall, stringsAsFactors = FALSE)
     pr$Precision[is.na(pr$Precision)] <- 0
     pr$Precision <- as.numeric(pr$Precision)
     pr$Recall <- as.numeric(pr$Recall)
