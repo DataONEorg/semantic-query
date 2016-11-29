@@ -100,7 +100,7 @@ query_function <- function(queryFragFullFilePath){
     
     if (!is.null(result) & length(result) > 0) {
       result$R_Time <- Sys.Date()
-      result$D1_node <- "CN-Sanbox2"
+      result$D1_node <- "urn:node:cnSandbox2"
       result$Query_ID <- queryid
       result$SOLR_Index_Type <- querytype
       result$Run_ID <- runGroup
