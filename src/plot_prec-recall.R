@@ -8,8 +8,10 @@ plot_pr <- function(results_Prec_Recall) {
     pr$Precision <- as.numeric(pr$Precision)
     pr$Recall <- as.numeric(pr$Recall)
     # Use a factor to set the order of search types to be plotted
-    pr$SOLR_Index_Type2 <- factor(pr$SOLR_Index_Type, levels=c("full_text", "metacat_ui", "bioportal_annot", "esor_annot", 'esor_cosine', "manual_annot", "nat_lang"), 
-                                  labels=c("Full Text", "Structured", "BioPortal", "ESOR wiki", "ESOR cosine", "Manual", "Natural"))
+    pr$SOLR_Index_Type2 <- factor(pr$SOLR_Index_Type, 
+                                  levels = c("full_text", "metacat_ui", "bioportal_annot", "esor_annot", "esor_cosine", "manual_annot", "nat_lang"), 
+                                  labels = c("Full Text", "Structured", "BioPortal",       "ESOR wiki",  "ESOR cosine", "Manual",       "Natural"))
+    
     # Eliminate search types not set in the above factor
     pr <- pr[which(!is.na(pr$SOLR_Index_Type2)), ]
     
