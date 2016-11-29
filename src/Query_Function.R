@@ -41,7 +41,13 @@ query_function <- function(queryFragFullFilePath){
   #print(runGroup)
   
   #Read in the query fragments from the input CSV file
-  queryFragment <- read.delim(queryFragmentFileDirectory, stringsAsFactors = F)
+  queryFragment <- read.csv(queryFragFullFilePath, quote = "", stringsAsFactors = FALSE)
+  stopifnot(nrow(queryFragment) > 0)
+  stopifnot(all(c("Query_ID", 
+                  "SOLR_Index_Type", 
+                  "Query_Frag", 
+                  "Ontology_Set_ID") %in% names(queryFragment)))
+  
   #print(queryFragment)
   
   # Initialize an output data frame with the proper columns
@@ -83,6 +89,10 @@ query_function <- function(queryFragFullFilePath){
         }
         
         all_pages
+    # Stop if there may be truncation of the results
+    if (nrow(result) >= rowsOfResult) {
+        stop(paste0("The maximum number of rows were returned in the last query,\n\n\t",
+                    queryString, "\n\nIt's possible the results were truncated and this will impact the calculation of precision and recall."))
     }
     
     result <- query_all_pages(cn, queryParamList)

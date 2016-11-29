@@ -24,6 +24,7 @@ precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation){
   
   #print(queryFunctionLocation)
   #print(calculateFunctionLocation)
+  stopifnot(file.exists(calculateFunctionLocation))
   
   source(queryFunctionLocation)
   source(calculateFunctionLocation)
