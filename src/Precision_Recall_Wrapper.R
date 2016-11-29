@@ -15,13 +15,12 @@
 # 3) homePath = the home path where the semantic-query repository is set up.
 # --> Ex: '~/dataone/gitcheckout/'
 
-precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation, homePath){
+precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation){
   
   ## This example needs to be commented out during the full automatic test ##
   #homePath <- '~/dataone/gitcheckout/'
   
-  queryFunctionLocation <- paste0(homePath, "semantic-query/src/Query_Function.R")
-  calculateFunctionLocation <- paste0(homePath, "semantic-query/src/Filter_Merge_Calculate_Function.R")
+  queryFunctionLocation <- "src/Query_Function.R"
   
   #print(queryFunctionLocation)
   #print(calculateFunctionLocation)
@@ -29,9 +28,9 @@ precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation, home
   source(queryFunctionLocation)
   source(calculateFunctionLocation)
   
-  outputFileLocation <- query_function(queryFragFullFilePath, homePath)
+  outputFileLocation <- query_function(queryFragFullFilePath)
   
-  finaloutputFileLocation <- filter_merge_calculate_function(gtFileLocation, outputFileLocation, homePath)
+  finaloutputFileLocation <- filter_merge_calculate_function(gtFileLocation, outputFileLocation)
   
   print("The precision and recall calculations can be found in the following file:")
   print(finaloutputFileLocation)

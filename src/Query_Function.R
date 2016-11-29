@@ -11,7 +11,7 @@
 # Note:
 # 1) The output of function is set up to be written to the following directory: '/semantic-query/results/Resultset_Summary'
 
-query_function <- function(queryFragFullFilePath, homePath){
+query_function <- function(queryFragFullFilePath){
   
   library(dataone)
   
@@ -32,7 +32,8 @@ query_function <- function(queryFragFullFilePath, homePath){
   #queryFragFullFilePath <- '~/dataone/gitcheckout/semantic-query/lib/queries/uc52_queries_all.csv'
   
   
-  queryFragmentFileDirectory <- queryFragFullFilePath
+  # Commented out because this line of code is unncessary
+  #queryFragmentFileDirectory <- queryFragFullFilePath
   #print(queryFragmentFileDirectory)
   
   # 4) Defining the entry for "Run_Group"
@@ -105,7 +106,7 @@ query_function <- function(queryFragFullFilePath, homePath){
   names(df)[1] <- "Dataset_ID"
   
   #outputFilePath <- '~/dataone/gitcheckout/semantic-query/results/Resultset_Summary'
-  outputFilePath <- paste0(homePath, "semantic-query/results/Resultset_Summary") 
+  outputFilePath <- "results/Resultset_Summary"
   
   # Write out the results as a CSV file using a filename linked to the runGroup
   write.csv(df, paste(outputFilePath, runGroup, ".csv", sep = '_'), row.names=F)
