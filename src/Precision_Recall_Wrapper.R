@@ -16,26 +16,21 @@
 # --> Ex: '~/dataone/gitcheckout/'
 
 precision_recall_wrapper <- function(queryFragFullFilePath, gtFileLocation){
-  
-  ## This example needs to be commented out during the full automatic test ##
-  #homePath <- '~/dataone/gitcheckout/'
-  
   queryFunctionLocation <- "src/Query_Function.R"
+  stopifnot(file.exists(queryFunctionLocation))
   
-  #print(queryFunctionLocation)
-  #print(calculateFunctionLocation)
+  calculateFunctionLocation <- "src/Filter_Merge_Calculate_Function.R"
   stopifnot(file.exists(calculateFunctionLocation))
+  
+  print(queryFunctionLocation)
+  print(calculateFunctionLocation)
   
   source(queryFunctionLocation)
   source(calculateFunctionLocation)
   
   outputFileLocation <- query_function(queryFragFullFilePath)
-  
   finaloutputFileLocation <- filter_merge_calculate_function(gtFileLocation, outputFileLocation)
   
   print("The precision and recall calculations can be found in the following file:")
   print(finaloutputFileLocation)
-  
-  return()
-  
 }
